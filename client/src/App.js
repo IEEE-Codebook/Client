@@ -1,12 +1,10 @@
 import './App.css';
-import Login from './components/Login';
+import GoogleOAuth from "./components/GoogleOAuth";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Login />
-      </header>
+      <GoogleOAuth/>
     </div>
   );
 }
