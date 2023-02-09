@@ -176,7 +176,7 @@ body .container .card .box .content a:hover {
   width: 1000px;
   position: relative;
   display: flex;
-  justify-content2: space-between;
+  justify-content: space-between;
 }
 
 .container2 .card2 {
