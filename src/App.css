@@ -176,7 +176,7 @@ body .container .card .box .content a:hover {
   width: 1000px;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content2: space-between;
 }
 
 .container2 .card2 {
@@ -215,7 +215,7 @@ body .container .card .box .content a:hover {
   transform: translate(-50%, -50%);
   font-size: 80px;
   transition: 0.7s;
-  color: #fff;
+  color: rgb(244, 243, 243);
 }
 
 
@@ -532,7 +532,7 @@ section {
   font: inherit;
   font-size: 14px;
   font-weight: normal;
-  color: #d1d2d2;
+  color: #0a0a0a;
 
   width: 400px;
   padding: 18px;
@@ -645,4 +645,8 @@ section {
 
 .page-contain :hover {
   color: #000;
+}
+
+.codebook :hover {
+  background-color: lightgrey;
 }

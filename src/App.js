@@ -71,7 +71,7 @@ const App = () => {
       <div class="content">
         <h2>#1</h2>
         <h3>Upcoming Contests</h3>
-        <p>Get to know the details about upcoming contests happening on various cding platforms</p>
+        <p>Get to know the details about upcoming contests happening on various coding platforms</p>
         <a href="#">Read More</a>
       </div>
     </div>
