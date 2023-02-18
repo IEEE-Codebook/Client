@@ -1,0 +1,74 @@
+body {
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  color: #fff;
+  padding: 10px;
+  background-color: #374954;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/* button {
+  background-color: #6bbe92;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 5px;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+} */
+form input {
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  width: 50%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  /* font-family: inherit; */
+  resize: none;
+}
+form button {
+  /* position: absolute;
+  right: 18px;
+  bottom: -18px; */
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  background: #f5ba13;
+  margin: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+.dropdown-container {
+  text-align: left;
+  border: 1px solid rgb(255, 221, 221);
+  position: relative;
+  border-radius: 5px;
+}
+
+.dropdown-input {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+table,
+th,
+td {
+  margin: auto;
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  border: 1px solid black;
+}
+th {
+  font-weight: bold;
+}
