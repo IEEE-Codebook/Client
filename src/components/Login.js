@@ -24,7 +24,7 @@ function Login() {
   });
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-warning">
         <a className="navbar-brand" href="#">
           Codebook
         </a>

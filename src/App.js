@@ -2,6 +2,7 @@ import "./App.css";
 import Calendar from "./components/Calendar";
 import GoogleOAuth from "./components/GoogleOAuth";
 import Login from "./components/Login";
+import ProfilePage from "./components/ProfilePage";
 import SignIn from "./components/SignIn";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       {/* <GoogleOAuth/>
       <Calendar /> */}
       <Login />
-      <SignIn />
+      {/* <SignIn /> */}
+      {/* <ProfilePage /> */}
     </div>
   );
 }
