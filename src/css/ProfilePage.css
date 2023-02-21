@@ -1,0 +1,149 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  float: left;
+  height: 900px;
+  width: 31%;
+  box-shadow: 0px 0px 12.5px 12px rgb(221, 220, 220);
+  padding-top: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 35px;
+  background-color: lightgrey;
+}
+
+.profile-pic {
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: aliceblue;
+  justify-content: center;
+  padding-left: 50px;
+  margin-top: 40px;
+}
+
+.ratings {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  height: 180px;
+  width: 32.5%;
+  box-shadow: 5px 7px 7.5px 7px rgb(221, 220, 220);
+  margin-left: 620px;
+  text-align: center;
+  border-radius: 35px;
+  background-color: lightgrey;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.recent-sub {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  float: right;
+  height: 800px;
+  width: 33%;
+  box-shadow: 0px 0px 12.5px 12px rgb(221, 220, 220);
+  padding-top: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 35px;
+  background-color: lightgrey;
+}
+
+.daily-activity {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  text-align: center;
+  text-decoration-color: white;
+  width: 33%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 5%;
+  position: absolute;
+  bottom: 105px;
+  background-color: rgb(142, 142, 206);
+}
+
+.connected-profiles {
+  display: flex;
+  justify-content: left;
+  height: 300px;
+  width: 33%;
+  box-shadow: 5px 7px 7.5px 7px rgb(221, 220, 220);
+  margin-left: 620px;
+  text-align: center;
+  border-radius: 35px;
+  margin-right: 575px;
+  background-color: lightgrey;
+  margin-bottom: 30px;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+.mail-pref {
+  display: flex;
+  justify-content: left;
+  height: 350px;
+  width: 32.5%;
+  box-shadow: 5px 7px 7.5px 7px rgb(221, 220, 220);
+  margin-left: 620px;
+  text-align: center;
+  margin-right: 625px;
+  border-radius: 35px;
+  background-color: lightgrey;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.delete-account {
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  text-align: center;
+  text-decoration-color: white;
+  width: 32.5%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 25px;
+  box-shadow: 5px 7px 7.5px 7px rgb(14, 14, 165);
+  position: absolute;
+  bottom: 20px;
+  background-color: rgb(14, 14, 165);
+}
+
+.blue-box {
+  display: flex;
+  justify-content: center;
+  height: 450px;
+  text-align: center;
+  text-decoration-color: white;
+  width: 28%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 35px;
+  position: absolute;
+  bottom: 10px;
+  background-color: rgb(27, 27, 105);
+}
+.badges {
+  color: azure;
+}
+.rank {
+  color: azure;
+}
+.points {
+  color: azure;
+}
+.credentials {
+  position: absolute;
+  text-align: center;
+  bottom: 480px;
+}
