@@ -1,0 +1,38 @@
+.SignInPage {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding: 90px 0 90px 0;
+}
+.sub-signin {
+  display: flex;
+  justify-content: center;
+  height: 715px;
+  width: 35%;
+  box-shadow: 11px 12px 12.5px 12px rgb(221, 220, 220);
+  padding-top: 10px;
+  border-radius: 35px;
+  background-color: whitesmoke;
+}
+
+.imgs {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.container-image {
+  height: 115px;
+  align-items: center;
+  width: 115px;
+}
+
+.profile-image {
+  height: 140px;
+  width: 180px;
+}
+
+.google-signin-image-btn {
+  height: 25px;
+  width: 25px;
+}
