@@ -1,20 +1,23 @@
 import "./App.css";
 import Calendar from "./components/Calendar";
 import GoogleOAuth from "./components/GoogleOAuth";
-import Landing_page from './components/Landing_page';
+import Landingpage from './components/Landingpage';
 import Login from "./components/Login";
 import ProfilePage from "./components/ProfilePage";
 import SignIn from "./components/SignIn";
+import Chat from "./components/Chat";
+import "./css/Chat.css"
 
 function App() {
   return (
     <div className="App">
-      <Landing_page/>
+      {/* <Landingpage/> */}
       {/* <GoogleOAuth/>
       <Calendar /> */}
-      <Login />
+      {/* <Login /> */}
       {/* <SignIn /> */}
       {/* <ProfilePage /> */}
+      <Chat />
     </div>
   );
 }
