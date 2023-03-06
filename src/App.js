@@ -5,6 +5,7 @@ import Landingpage from './components/Landingpage';
 import Login from "./components/Login";
 import ProfilePage from "./components/ProfilePage";
 import SignIn from "./components/SignIn";
+import Mock_Interview from "./components/Mock_Interview";
 import Chat from "./components/Chat";
 import "./css/Chat.css"
 
@@ -17,6 +18,8 @@ function App() {
       {/* <Login /> */}
       {/* <SignIn /> */}
       {/* <ProfilePage /> */}
+      <Mock_Interview/>
+      
       <Chat />
     </div>
   );
