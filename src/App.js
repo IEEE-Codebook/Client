@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
-// import Calendar from "./components/Calendar";
-// import GoogleOAuth from "./components/GoogleOAuth";
-// import Landingpage from './components/Landingpage';
-// import Login from "./components/Login";
-// import ProfilePage from "./components/ProfilePage";
-// import SignIn from "./components/SignIn";
-// import Chat from "./components/Chat";
+import Calendar from "./components/Calendar";
+import GoogleOAuth from "./components/GoogleOAuth";
+import Landingpage from "./components/Landingpage";
+import Login from "./components/Login";
+import ProfilePage from "./components/ProfilePage";
+import SignIn from "./components/SignIn";
+import Mock_Interview from "./components/Mock_Interview";
+import Chat from "./components/Chat";
+import "./css/Chat.css";
 import "./css/Chat.css";
 import { getToken } from "firebase/messaging";
 import { useEffect } from "react";
@@ -26,9 +28,10 @@ function App() {
   useEffect(() => {
     requestPermission();
   }, []);
-  return <div className="App">
-    
-  </div>;
+  return (
+    <div className="App">
+      <Mock_Interview />
+    </div>
+  );
 }
-
 export default App;
