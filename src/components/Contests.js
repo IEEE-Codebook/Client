@@ -1,11 +1,23 @@
-import React from 'react'
+import React ,{useState} from 'react'
+import RealApiCall from './RealApiCall'
+import Input from './Contest_input'
+import "../css/Contest.css"
 
-function contests() {
-  return (
+
+function Contests() {
+  const [p, sp] = useState("");
+
+  function setter(platformName) {
+    // console.log(platformName)
+    sp(platformName);
+  }
+  return ( 
     <div>
-        
+    <h1>Upcoming Contest List</h1>
+    <Input clickee={setter} />
+        <RealApiCall platformName={p}/>
     </div>
   )
 }
 
-export default contests
+export default Contests

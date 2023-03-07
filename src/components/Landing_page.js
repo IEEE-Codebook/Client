@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
-import Landing_page from "../css/Landing_page";
+import contests from "./Contests"
+import "../css/Landing_page.css";
+
 
 const Landing_page = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+const[uc,suc]=useState(false)
+
+
+function handleClick(event){
+  // const ad=event.target.value
+  // suc(true)
+<contests />
+}
+
   return (
     <div className="App">
       {/* Navigation Bar */}
@@ -15,7 +26,7 @@ const Landing_page = () => {
         
         </div>
         <div className='navbar'>
-        <a href="#">About</a>
+        <a href= '#'>About</a>
         <a href="#">SignUp</a>
         {isLoggedIn ? (
           <a href="#" onClick={() => setIsLoggedIn(false)}>
@@ -71,7 +82,9 @@ const Landing_page = () => {
         <h2>#1</h2>
         <h3>Upcoming Contests</h3>
         <p>Get to know the details about upcoming contests happening on various coding platforms</p>
-        <a href="#">Know More</a>
+        <a href="../public/index2.html">Know More</a>
+        {/* <button onClick={handleClick}>Know More</button> */}
+        
       </div>
     </div>
   </div>

@@ -5,16 +5,17 @@ import Landing_page from './components/Landing_page';
 import Login from "./components/Login";
 import ProfilePage from "./components/ProfilePage";
 import SignIn from "./components/SignIn";
-
+import Contests from "./components/Contests"
 function App() {
   return (
     <div className="App">
-      <Landing_page/>
+      {/* <Landing_page/> */}
       {/* <GoogleOAuth/>
       <Calendar /> */}
-      <Login />
+      {/* <Login /> */}
       {/* <SignIn /> */}
       {/* <ProfilePage /> */}
+<Contests />
     </div>
   );
 }
