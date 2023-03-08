@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import ProfilePage from "./components/ProfilePage";
 import SignIn from "./components/SignIn";
 import Mock_Interview from "./components/Mock_Interview";
+import Home_Page from "./components/Home_Page";
 import Chat from "./components/Chat";
 import "./css/Chat.css"
 
@@ -19,6 +20,7 @@ function App() {
       {/* <SignIn /> */}
       {/* <ProfilePage /> */}
       <Mock_Interview/>
+      <Home_Page/>
       
       <Chat />
     </div>
