@@ -12,15 +12,14 @@ import "./css/Chat.css"
 function App() {
   return (
     <div className="App">
-      {/* <Landingpage/> */}
+      <Landingpage/>
       {/* <GoogleOAuth/>
       <Calendar /> */}
       {/* <Login /> */}
       {/* <SignIn /> */}
       {/* <ProfilePage /> */}
-      <Mock_Interview/>
-      
-      <Chat />
+      {/* <Mock_Interview/> */}
+     
     </div>
   );
 }
