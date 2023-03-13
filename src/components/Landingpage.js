@@ -38,7 +38,11 @@ const Landingpage = () => {
       {/* Landing Header */}
       <header>
         <h1>Welcome to CODEBOOK!</h1>
-        <h5>Join the amazing community of 10,000+ coders!!</h5>
+        <h3>Where coding is not just a skill, it's a passion!!</h3>
+        <br />
+
+        <h5>Join the amazing community of </h5><h3>10,000+</h3> <h5> coders!!</h5>
+
       </header>
 
       {/* User Count */}
@@ -116,29 +120,29 @@ const Landingpage = () => {
           />
           <h3>CODEBOOK</h3>
 
-          <p class="footer-links">
-            <a href="#">Home</a>·<a href="#">Blog</a>·<a href="#">About</a>·
-            <a href="#">Faq</a>·<a href="#">Contact</a>
-          </p>
+          <div class="footer-links">
+            <a href="#">Home</a>      ·              <a href="#">Blog</a>   ·   <a href="#">About</a>   ·   
+            <a href="#">Faq</a>   ·   <a href="#">Contact</a>
+          </div>
 
           <div class="footer-icons">
             <a href="#">
               <img
-                src="https://thumbs.dreamstime.com/b/black-white-twitter-logo-icon-high-resolution-black-white-twitter-logo-white-background-vector-eps-file-available-175771728.jpg"
+                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/twitter-round-icon.png"
                 height={"50px"}
                 alt=""
               />
             </a>
             <a href="#">
               <img
-                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png"
                 height={"50px"}
                 alt=""
               />
             </a>
             <a href="#">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFRCcMZuMyCiIAOk0lKeQQoRWmgMV9sY330Yd7JSI&s"
+                src="https://icones.pro/wp-content/uploads/2021/03/icone-linkedin-ronde-noire.png"
                 height={"50px"}
                 alt=""
               />
@@ -152,12 +156,15 @@ const Landingpage = () => {
           <form action="#" method="post">
             <input type="text" name="email" placeholder="Email"></input>
             <textarea name="message" placeholder="Message"></textarea>
-            <button className="bttn">Send</button>
+            <button className="button-27">Send</button>
           </form>
         </div>
       </footer>
     </div>
   );
 };
+
+      
+    
 
 export default Landingpage;
