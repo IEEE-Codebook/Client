@@ -5,13 +5,14 @@ import Signup from "./components/auth/Signup"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import "./App.css";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/NavBar";
+
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-       <Navbar />
+       <NavBar />
        <Routes>
         <Route path="/" element={<Landingpage/>} />
         <Route path="/login" element={<Login/>} />

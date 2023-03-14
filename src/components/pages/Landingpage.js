@@ -1,16 +1,11 @@
-import React, { useState } from "react";
-import NavBar from "./NavBar";
+import React from "react";
 
-import "../css/Landingpage.css";
+import "../../css/Landingpage.css"
 
 const Landingpage = () => {
   
   return (
     <div className="App">
-      {/* Navigation Bar */}
-      <NavBar/>
-
-      {/* Landing Header */}
       <header>
         <h1>Welcome to CODEBOOK!</h1>
         <h5>Join the amazing community of 10,000+ coders!!</h5>
