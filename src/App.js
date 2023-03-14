@@ -1,37 +1,24 @@
 import React from "react";
+import Landingpage from "./components/pages/Landingpage"
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup"
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import {BrowserRouter,Routes,Route} from "react-router-dom"
 import "./App.css";
-import Calendar from "./components/Calendar";
-import GoogleOAuth from "./components/GoogleOAuth";
-import Landingpage from "./components/Landingpage";
-import Login from "./components/Login";
-import ProfilePage from "./components/ProfilePage";
-import SignIn from "./components/SignIn";
-import Mock_Interview from "./components/Mock_Interview";
-import Chat from "./components/Chat";
-import "./css/Chat.css";
-import "./css/Chat.css";
-import { getToken } from "firebase/messaging";
-import { useEffect } from "react";
-import { messaging } from "./components/Firebase";
+import Navbar from "./components/Navbar";
 
 function App() {
-  async function requestPermission() {
-    const persmission = await Notification.requestPermission();
-    if (persmission === "granted") {
-      const token = await getToken(messaging, {
-        vapidKey:
-          "BPRnzHGshBcD1XgvVp3CeQ0DK6JbZsqqj29hpCWkvEDdI2yXbm_Nqp3T7O4rsa6TOm2LzR7nLBkzc2DUGBnjUlY",
-      });
-      console.log(token);
-    } else if (persmission === "denied") console.log("Permission denied");
-  }
-  useEffect(() => {
-    requestPermission();
-  }, []);
   return (
+    <BrowserRouter>
     <div className="App">
-      <Mock_Interview />
+       <Navbar />
+       <Routes>
+        <Route path="/" element={<Landingpage/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup />} />
+       </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 export default App;
