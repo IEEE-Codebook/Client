@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "./components/NavBar"
 import Landingpage from "./components/pages/Landingpage"
 import Login from "./components/auth/Login";
 import Signup from "./components/auth/Signup"
