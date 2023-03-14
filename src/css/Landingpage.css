@@ -72,9 +72,11 @@ nav {
   
 
 header {
+    background-color: #d6d2d2;
     padding: 2rem;
-
-    color: rgb(6, 1, 1)
+    background-image: url("https: //www.springboard.com/blog/wp-content/uploads/2022/09/programmng-language.jpg");
+    /* background-image: url("https: //www.shutterstock.com/image-vector/programming-code-coding-hacker-background-260nw-1714491562.jpg"); */
+    color: rgb(12, 12, 12)
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
@@ -338,6 +340,7 @@ body .container .card .box .content a:hover {
 
 
 .page-contain {
+    text-decoration: none;
     display: flex;
     min-height: 100vh;
     align-items: center;
@@ -398,7 +401,7 @@ p {
 }
 
 
-a:hover {
+.page-contain a:hover {
     background: #b1b0b3;
     color: #000;
     transform: scale(1.02);
@@ -489,18 +492,26 @@ section {
 /* Footer links */
 
 .footer-distributed .footer-links {
-    color: #ffffff;
-    margin: 0 0 10px;
-    padding: 0;
+    color: #fefdfd;
+    margin: 10px 10px;
+    padding: 10px 10px;
 }
 
 .footer-distributed .footer-links a {
     display: inline-block;
     line-height: 1.8;
     text-decoration: none;
-    color: inherit;
+    color: white;
+    transition: color .45s ease, border .45s ease;
+
+    /* color: inherit; */
 }
 
+/* 
+ */
+/* .footer-distributed .footer-links a :hover{
+  color: #000;
+} */
 .footer-distributed .footer-company-name {
     color: #8f9296;
     font-size: 14px;
@@ -596,14 +607,62 @@ section {
     margin-bottom: 20px;
 }
 
-.footer-distributed form button {
+/* .footer-distributed form button {
     border-radius: 3px;
     background-color: #f5f6f7;
     color: #0c0c0c;
     border: 0;
     padding: 15px 50px;
     font-weight: bold;
-    float: right;
+    
+    
+} */
+
+/* < !-- HTML !--><button class="button-27" role="button">Button 27</button> */
+
+/* CSS */
+.button-27 {
+    position: relative;
+    right: -164px;
+    appearance: none;
+    background-color: #ffffff;
+    border: 2px solid #1A1A1A;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #0d0d0d;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: -22px;
+    min-width: 20px;
+    outline: none;
+    padding: 11px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 20%;
+    will-change: transform;
+}
+
+.button-27:disabled {
+    pointer-events: none;
+}
+
+.button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
@@ -673,14 +732,14 @@ section {
     font: bolder;
 }
 
-.navbar a:hover {
+/* .navbar a:hover {
     background-color: rgb(159, 155, 155)
-}
+} */
 
 .page-contain :hover {
     color: #000;
 }
 
-.codebook :hover {
+/* .codebook :hover {
     background-color: lightgrey;
-}
+} */
