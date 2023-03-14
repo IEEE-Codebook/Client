@@ -5,8 +5,6 @@ import Signup from "./components/auth/Signup"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import "./App.css";
-import NavBar from "./components/NavBar";
-
 
 function App() {
   return (
