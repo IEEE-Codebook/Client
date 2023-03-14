@@ -1,52 +1,36 @@
-import React from "react";
-import "../css/Navbar.css";
-function Navbar() {
-  return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-warning">
-        <a className="navbar-brand" href="/">
-          Codebook
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="/login">
-                login <span className="sr-only">(current)</span>
-              </a>
-              <a className="nav-link" href="/signup">
-                signup <span className="sr-only">(current)</span>
-              </a>
-            </li>
-          </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <input
-              className="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
-    </div>
-  );
+import React,{useState} from 'react'
+// import ReactDOM from 'reactdom'
+
+const NavBar=()=>{
+    
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    return(
+        
+<nav>
+  <div class="logo-text">
+    <a href="#"><img src="https://cdn.xxl.thumbs.canstockphoto.com/code-book-logo-icon-design-eps-vector_csp63585084.jpg" alt="Logo" /></a>
+    <a href="#">CODEBOOK</a>
+  </div>
+  <div class="nav-links">
+    <a href="#">About</a>
+    {isLoggedIn ? (
+             <a href="#" onClick={() => setIsLoggedIn(false)}>
+                   Log Out
+                 </a>
+               ) : (
+                 <a href="#" onClick={() => setIsLoggedIn(true)}>
+                   Log In
+                 </a>
+               )}
+    
+    <a href="#">Signup</a>
+  </div>
+</nav>
+
+    )
+    
 }
 
-export default Navbar;
+
+export default NavBar;
