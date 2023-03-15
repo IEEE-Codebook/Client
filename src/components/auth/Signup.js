@@ -1,32 +1,29 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { signup } from "../../api/authSlice";
 import "../../css/SignIn.css";
 import "../../images/code-bg.jpg";
 
 const Signup = () => {
-  const [name, setName] = useState("");
+  const [name,setName] = useState("");
   const [password, setPasword] = useState("");
   const [email, setEmail] = useState("");
   const [cf_handle, setCF_handle] = useState("");
-
-  const uploadFields = () => {
-    fetch("/signup", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        password,
-        email,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = {
+      name:name,
+      email:email,
+      password:password,
+      codeforces:cf_handle,
+    }
+    dispatch(signup(user));
+    console.log(user);
+    setName("");
+    setPasword("");
+    setEmail("");
+    setCF_handle("");
   };
 
   return (
@@ -38,22 +35,24 @@ const Signup = () => {
             <br />
             <h1>SignUp</h1>
             <br />
+            <form onSubmit={handleSubmit}>
             <div>
-              <h5>Enter your Name:</h5>
+              <br />
+              <h5>Enter your name:</h5>
               <input
+                type="name"
                 className="input"
-                type="text"
-                placeholder="name"
+                placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+              <br />
             </div>
             <div>
               <br />
               <h5>Enter your email:</h5>
-
               <input
-                type="text"
+                type="email"
                 className="input"
                 placeholder="email"
                 value={email}
@@ -71,7 +70,6 @@ const Signup = () => {
                 value={password}
                 onChange={(e) => setPasword(e.target.value)}
               />
-
               <div>
                 <br />
                 <h5>Enter your Codeforces handle:</h5>
@@ -86,12 +84,13 @@ const Signup = () => {
               <br />
 
               <button
-                className="btn btn-primary-outline"
-                onClick={() => uploadFields()}
-              >
-                SignUp
-              </button>
+                  className="btn btn-outline-primary my-2 my-sm-0"
+                  type="submit"
+                >
+                  Sign Up
+                </button>
             </div>
+            </form>
             <div>
               <br />
               <h5>

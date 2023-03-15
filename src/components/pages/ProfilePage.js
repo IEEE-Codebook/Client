@@ -1,11 +1,9 @@
 import React from "react";
-import { Navbar } from "./Navbar";
-import "../css/ProfilePage.css";
+import "../../css/ProfilePage.css";
 
 const ProfilePage = () => {
   return (
     <div className="main">
-      <Navbar />
       <div className="row">
         <div className="col-md-4 mt-1">
           <div className="card text-center sidebar">
@@ -13,7 +11,7 @@ const ProfilePage = () => {
               <img
                 className="rounded-circle"
                 src="https://i.imgur.com/cMy8V5j.png"
-                alt="user-image"
+                alt="user"
               />
               <div className="user-name-profile mt-3">
                 <div className="user-name">
