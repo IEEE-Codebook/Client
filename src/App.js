@@ -1,5 +1,6 @@
 import "./App.css";
 import Calendar from "./components/Calendar";
+import Footer from "./components/Footer";
 import GoogleOAuth from "./components/GoogleOAuth";
 import Login from "./components/Login";
 import ProfilePage from "./components/ProfilePage";
@@ -10,9 +11,10 @@ function App() {
     <div className="App">
       {/* <GoogleOAuth/>
       <Calendar /> */}
-      <Login />
-      {/* <SignIn /> */}
+      {/* <Login /> */}
+      <SignIn />
       {/* <ProfilePage /> */}
+      <Footer />
     </div>
   );
 }

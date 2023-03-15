@@ -2,7 +2,7 @@ import React from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import "../css/Login.css";
-import google_icon from "./images/google_icon.png";
+import { Navbar } from "./Navbar";
 
 function Login() {
   const login = useGoogleLogin({
@@ -23,47 +23,8 @@ function Login() {
     },
   });
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-warning">
-        <a className="navbar-brand" href="#">
-          Codebook
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
-          </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <input
-              className="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
+    <div className="main-login">
+      <Navbar />
 
       <div className="LoginPage">
         <div className="sub-login">
@@ -83,12 +44,12 @@ function Login() {
             <br />
             <div>
               <h5>Enter Username:</h5>
-              <input type="text" placeholder="Username" />
+              <input className="input" type="text" placeholder="Username" />
             </div>
             <div>
               <br />
               <h5>Enter Password:</h5>
-              <input type="password" placeholder="Password" />
+              <input className="input" type="password" placeholder="Password" />
             </div>
             <div className="login-button">
               <br />
@@ -100,21 +61,6 @@ function Login() {
               </button>
               <br />
               <br />
-              <div>
-                <p>
-                  Or use Google to sign in
-                  <br />
-                  <button
-                    className="btn btn-outline-primary my-2 my-sm-0"
-                    type="submit"
-                  >
-                    <img
-                      src={google_icon}
-                      className="google-signin-image-btn"
-                    ></img>
-                  </button>
-                </p>
-              </div>
             </div>
             <div>
               <p className="link">

@@ -1,18 +1,26 @@
+.main-login {
+  background-image: url(../assets/images/code-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
 .LoginPage {
   text-align: center;
   justify-content: center;
   display: flex;
   padding: 90px 0 90px 0;
+  color: white;
 }
 .sub-login {
   display: flex;
   justify-content: center;
   height: 675px;
   width: 35%;
-  box-shadow: 11px 12px 12.5px 12px rgb(221, 220, 220);
+
   padding-top: 10px;
   border-radius: 35px;
-  background-color: whitesmoke;
+  background-color: rgb(28, 8, 82);
 }
 
 .imgs {
