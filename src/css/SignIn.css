@@ -4,15 +4,32 @@
   display: flex;
   padding: 90px 0 90px 0;
 }
+.main-signup {
+  background-image: url(../images/code-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
 .sub-signin {
   display: flex;
   justify-content: center;
-  height: 715px;
+  height: 690px;
   width: 35%;
-  box-shadow: 11px 12px 12.5px 12px rgb(221, 220, 220);
-  padding-top: 10px;
+  padding-top: 5px;
   border-radius: 35px;
-  background-color: whitesmoke;
+  background-color: rgb(28, 8, 82);
+}
+
+.welcome {
+  padding-top: 20px;
+}
+
+.input {
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
 }
 
 .imgs {

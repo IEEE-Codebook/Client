@@ -1,78 +1,114 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "../../css/SignIn.css";
-import { useSelector, useDispatch } from "react-redux";
-import { signup } from "../../api/authSlice";
+import "../../images/code-bg.jpg";
 
 const Signup = () => {
-  const dispatch = useDispatch();
   const [name, setName] = useState("");
+  const [password, setPasword] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [cf_handle, setCF_handle] = useState("");
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    const user = {
-      name: name,
-      email: email,
-      password: password,
-    };
-    dispatch(signup(user));
-    console.log(user);
-    setName("");
-    setEmail("");
-    setPassword("");
+  const uploadFields = () => {
+    fetch("/signup", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        password,
+        email,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <h3>Sign Up</h3>
+    <div className="main-signup">
+      <div className="SignInPage">
+        <div className="sub-signin">
+          <div className="welcome">
+            <h1>Welcome to CodeBook!</h1>
+            <br />
+            <h1>SignUp</h1>
+            <br />
+            <div>
+              <h5>Enter your Name:</h5>
+              <input
+                className="input"
+                type="text"
+                placeholder="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div>
+              <br />
+              <h5>Enter your email:</h5>
 
-        <div className="mb-3">
-          <label>First name</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="First name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
+              <input
+                type="text"
+                className="input"
+                placeholder="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <br />
+            </div>
+            <div>
+              <br />
+              <h5>Choose a strong password:</h5>
+              <input
+                type="password"
+                className="input"
+                placeholder="password"
+                value={password}
+                onChange={(e) => setPasword(e.target.value)}
+              />
 
-        <div className="mb-3">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+              <div>
+                <br />
+                <h5>Enter your Codeforces handle:</h5>
+                <input
+                  type="text"
+                  placeholder="CodeForces handle"
+                  className="input"
+                  value={cf_handle}
+                  onChange={(e) => setCF_handle(e.target.value)}
+                />
+              </div>
+              <br />
 
-        <div className="mb-3">
-          <label>Password</label>
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+              <button
+                className="btn btn-primary-outline"
+                onClick={() => uploadFields()}
+              >
+                SignUp
+              </button>
+            </div>
+            <div>
+              <br />
+              <h5>
+                <a href="/login">Already have an account ?</a>
+              </h5>
+            </div>
+          </div>
         </div>
-
-        <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
-            Sign Up
-          </button>
-        </div>
-        <p className="forgot-password text-right">
-          Already registered <a href="/login">sign in?</a>
-        </p>
-      </form>
+      </div>
     </div>
   );
 };
 
 export default Signup;
+
+<div>
+  <div>
+    <h2>CodeBook</h2>
+  </div>
+</div>;

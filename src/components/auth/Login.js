@@ -1,10 +1,28 @@
 import React from "react";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 import "../../css/Login.css";
-import google_icon from "../../images/google_icon.png";
 
 function Login() {
+  const login = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${response.access_token}`,
+            },
+          }
+        );
+        console.log(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  });
   return (
-    <div>
+    <div className="main-login">
       <div className="LoginPage">
         <div className="sub-login">
           <div>
@@ -18,12 +36,12 @@ function Login() {
             <br />
             <div>
               <h5>Enter Username:</h5>
-              <input type="text" placeholder="Username" />
+              <input className="input" type="text" placeholder="Username" />
             </div>
             <div>
               <br />
               <h5>Enter Password:</h5>
-              <input type="password" placeholder="Password" />
+              <input className="input" type="password" placeholder="Password" />
             </div>
             <div className="login-button">
               <br />
@@ -35,22 +53,6 @@ function Login() {
               </button>
               <br />
               <br />
-              <div>
-                <p>
-                  Or use Google to sign in
-                  <br />
-                  <button
-                    className="btn btn-outline-primary my-2 my-sm-0"
-                    type="submit"
-                  >
-                    <img
-                      src={google_icon}
-                      className="google-signin-image-btn"
-                      alt="goolge login"
-                    ></img>
-                  </button>
-                </p>
-              </div>
             </div>
             <div>
               <p className="link">

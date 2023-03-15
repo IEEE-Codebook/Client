@@ -1,149 +1,85 @@
-.profile {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  float: left;
-  height: 900px;
-  width: 31%;
-  box-shadow: 0px 0px 12.5px 12px rgb(221, 220, 220);
-  padding-top: 10px;
-  margin-top: 10px;
-  text-align: center;
-  border-radius: 35px;
-  background-color: lightgrey;
+.html,
+.body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.profile-pic {
-  height: 250px;
-  width: 250px;
-  border-radius: 100%;
-  position: absolute;
-  background-color: aliceblue;
-  justify-content: center;
-  padding-left: 50px;
-  margin-top: 40px;
+.main {
+  background-color: white;
+}
+.row {
+  height: 80em;
+  width: 100%;
+}
+
+.col-md-3 {
+  height: 80em;
+  border-radius: 1em;
+  background-size: cover;
 }
 
 .ratings {
-  display: flex;
-  justify-content: left;
-  position: relative;
-  height: 180px;
-  width: 32.5%;
-  box-shadow: 5px 7px 7.5px 7px rgb(221, 220, 220);
-  margin-left: 620px;
-  text-align: center;
-  border-radius: 35px;
-  background-color: lightgrey;
-  margin-top: 10px;
-  margin-bottom: 30px;
-
-  padding-left: 25px;
-  padding-top: 10px;
+  background-color: whitesmoke;
+  border-radius: 2em;
+  padding: 1em;
+  height: 30em;
+  padding: 1em;
+  margin: 1em;
 }
-
-.recent-sub {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  float: right;
-  height: 800px;
-  width: 33%;
-  box-shadow: 0px 0px 12.5px 12px rgb(221, 220, 220);
-  padding-top: 10px;
-  margin-top: 10px;
-  text-align: center;
-  border-radius: 35px;
-  background-color: lightgrey;
+.card {
+  height: 83em;
 }
-
-.daily-activity {
-  display: flex;
-  justify-content: center;
-  height: 400px;
-  text-align: center;
-  text-decoration-color: white;
-  width: 33%;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  border-radius: 5%;
-  position: absolute;
-  bottom: 105px;
-  background-color: rgb(142, 142, 206);
+.recent-submissions {
+  background-color: whitesmoke;
+  border-radius: 2em;
+  padding: 1em;
+  height: 20em;
+  padding: 1em;
+  margin: 1em;
 }
-
 .connected-profiles {
-  display: flex;
-  justify-content: left;
-  height: 300px;
-  width: 33%;
-  box-shadow: 5px 7px 7.5px 7px rgb(221, 220, 220);
-  margin-left: 620px;
-  text-align: center;
-  border-radius: 35px;
-  margin-right: 575px;
-  background-color: lightgrey;
-  margin-bottom: 30px;
-  padding-left: 25px;
-  padding-top: 10px;
+  background-color: aquamarine;
+  border-radius: 2em;
+  padding: 1em;
+  height: 20em;
+  margin: 1em;
 }
 .mail-pref {
-  display: flex;
-  justify-content: left;
-  height: 350px;
-  width: 32.5%;
-  box-shadow: 5px 7px 7.5px 7px rgb(221, 220, 220);
-  margin-left: 620px;
-  text-align: center;
-  margin-right: 625px;
-  border-radius: 35px;
-  background-color: lightgrey;
-  margin-bottom: 20px;
-  padding-left: 25px;
-  padding-top: 10px;
+  background-color: aquamarine;
+  border-radius: 2em;
+  padding: 1em;
+  height: 20em;
+  margin: 1em;
 }
-
 .delete-account {
-  display: flex;
-  justify-content: center;
-  height: 75px;
+  background-color: red;
   text-align: center;
-  text-decoration-color: white;
-  width: 32.5%;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  border-radius: 25px;
-  box-shadow: 5px 7px 7.5px 7px rgb(14, 14, 165);
-  position: absolute;
-  bottom: 20px;
-  background-color: rgb(14, 14, 165);
+  height: 6em;
+  padding-top: 0.8em;
 }
-
-.blue-box {
-  display: flex;
-  justify-content: center;
-  height: 450px;
-  text-align: center;
-  text-decoration-color: white;
-  width: 28%;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  border-radius: 35px;
-  position: absolute;
-  bottom: 10px;
-  background-color: rgb(27, 27, 105);
+.recent-submissions {
+  height: 26em;
+  padding: 1em;
 }
-.badges {
-  color: azure;
+.user-name,
+.rank,
+.points,
+.badge,
+.friends {
+  background-color: aquamarine;
+  height: 16em;
+  border-radius: 2em;
+  padding: 1em;
 }
-.rank {
-  color: azure;
+.rounded-circle {
+  height: 20em;
+}
+.badge {
+  height: 25em;
+  margin: 1em;
 }
 .points {
-  color: azure;
-}
-.credentials {
-  position: absolute;
-  text-align: center;
-  bottom: 480px;
+  margin-left: 1em;
+  margin-right: 1em;
 }
