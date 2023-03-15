@@ -1,5 +1,5 @@
 import React from 'react';
-import "../css/Home_Page.css";
+import "../../css/Home_Page.css";
 
 function Home_Page() {
   return (
@@ -13,8 +13,8 @@ function Home_Page() {
         
         </div>
         <div className='right'>
-          <a href="#">Profile</a>
-          <a href="#">About</a>
+          <a href="/profile">Profile</a>
+          <a href="/about">About</a>
           <a href="#">Contact</a>
         </div>
       </nav>

@@ -1,7 +1,13 @@
 import React from "react";
-
+import { useSelector, useDispatch } from "react-redux";
+import { logout, reset} from "../api/authSlice";
 const NavBar = () => {
-
+  const { user } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logout);
+    dispatch(reset);
+  }
   return (
     <nav>
       <div class="logo-text">
@@ -14,10 +20,14 @@ const NavBar = () => {
         <a href="/">CODEBOOK</a>
       </div>
       <div class="nav-links">
-        <a href="#0">About</a>
-        <a href="/login">Login</a>
-
-        <a href="/signup">Signup</a>
+        {user ? (
+          <a href="/" onClick={handleLogout()}>logout</a>
+        ) : (
+          <div className="flex-navbar">
+            <a href="/login">Login</a>
+            <a href="/signup">Signup</a>
+          </div>
+        )}
       </div>
     </nav>
   );

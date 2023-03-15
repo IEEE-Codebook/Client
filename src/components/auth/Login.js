@@ -10,11 +10,6 @@ function Login() {
           <div>
             <div className="imgs">
               <div className="container-image">
-                {/* <img
-                  src={profile}
-                  alt="....image"
-                  className="profile-image"
-                ></img> */}
               </div>
             </div>
             <h1>Welcome to CodeBook!</h1>
