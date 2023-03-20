@@ -25,7 +25,7 @@ function Home_Page() {
         <div className="card" id="c1">
           <h2 className="card-title">Upcoming Contests</h2>
           <div className="card-content">
-            <p>Content for Upcoming Contests</p>
+            <a href="/upcomingContests">Upcoming Contests</a>
           </div>
         </div>
         <div className="card">
