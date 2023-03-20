@@ -58,7 +58,7 @@ const Landingpage = () => {
                 Get to practice challenges and quizzes and get to know your
                 rankings amongst your peers
               </p>
-              <a href="#0">Know More</a>
+              <a href="/UserSubmission">Know More</a>
             </div>
           </div>
         </div>
