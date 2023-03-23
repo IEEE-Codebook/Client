@@ -14,7 +14,7 @@ const NavBar = () => {
         <a href="/">CODEBOOK</a>
       </div>
       <div className="nav-links">
-        <a href="#0">About</a>
+        <a href="/">About</a>
         <a href="/login">Login</a>
 
         <a href="/signup">Signup</a>
