@@ -1,6 +1,6 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import {login} from "../../api/authSlice"
+import { login } from "../../api/authSlice";
 import "../../css/Login.css";
 
 function Login() {
@@ -15,8 +15,8 @@ function Login() {
       password: password,
     };
     dispatch(login(user));
-    setEmail("")
-    setPasword("")
+    setEmail("");
+    setPasword("");
   };
   return (
     <div className="main-login">

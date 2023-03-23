@@ -1,5 +1,7 @@
 import React from "react";
 import "../../css/ProfilePage.css";
+import "../ToDoList.js";
+import TodoList from "../ToDoList.js";
 
 const ProfilePage = () => {
   return (
@@ -31,13 +33,14 @@ const ProfilePage = () => {
         </div>
         <div className="col-md-4 mt-1">
           <div className="card text-left">
-            <div className="recent-submissions">
-              <h4>recent subs</h4>
+            <div className="todo-list">
+              {/* <h4>To-Do list</h4> */}
+              <TodoList />
             </div>
-            <div className="points mt-5">
+            <div className="points mt-1">
               <h3>Points</h3>
             </div>
-            <div className="badge mt-5">
+            <div className="badge mt-1">
               <h3>Badge</h3>
             </div>
           </div>
