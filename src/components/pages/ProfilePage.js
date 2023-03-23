@@ -1,7 +1,21 @@
 import React from "react";
 import "../../css/ProfilePage.css";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { getProfile } from "../../api/profileSlice";
 const ProfilePage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.auth);
+  const {isError,message } =
+    useSelector((state) => state.profile);
+
+  useEffect(() => {
+    if (isError) console.log(message);
+    if (!user) navigate("/login");
+    dispatch(getProfile(user));
+  }, [isError, message, user, navigate, dispatch]);
   return (
     <div className="main">
       <div className="row">

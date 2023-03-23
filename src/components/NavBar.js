@@ -1,7 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const NavBar = () => {
-
+  const { user } = useSelector((state) => state.auth);
   return (
     <nav>
       <div className="logo-text">
@@ -13,12 +14,20 @@ const NavBar = () => {
         </a>
         <a href="/">CODEBOOK</a>
       </div>
-      <div className="nav-links">
-        <a href="#0">About</a>
-        <a href="/login">Login</a>
+      {!user ? (
+        <div className="nav-links">
+          <a href="#0">About</a>
+          <a href="/login">Login</a>
 
-        <a href="/signup">Signup</a>
-      </div>
+          <a href="/signup">Signup</a>
+        </div>
+      ) : (
+        <div className="nav-links">
+          <a href="/profile">profile</a>
+
+          <a href="/signup">logout</a>
+        </div>
+      )}
     </nav>
   );
 };

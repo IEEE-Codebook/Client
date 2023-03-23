@@ -1,10 +1,12 @@
 import { React, useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 import {login} from "../../api/authSlice"
 import "../../css/Login.css";
 
 function Login() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [password, setPasword] = useState("");
   const [email, setEmail] = useState("");
 
@@ -17,6 +19,7 @@ function Login() {
     dispatch(login(user));
     setEmail("")
     setPasword("")
+    navigate("/home");
   };
   return (
     <div className="main-login">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 import { signup } from "../../api/authSlice";
 import "../../css/SignIn.css";
 import "../../images/code-bg.jpg";
@@ -10,6 +11,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [cf_handle, setCF_handle] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = {
@@ -24,6 +26,7 @@ const Signup = () => {
     setPasword("");
     setEmail("");
     setCF_handle("");
+    navigate("/home")
   };
 
   return (
