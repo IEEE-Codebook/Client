@@ -44,7 +44,7 @@ const Landingpage = () => {
                 Get to know the details about upcoming contests happening on
                 various coding platforms
               </p>
-              <a href="#0">Know More</a>
+              <a href="/upcomingContests">Know More</a>
             </div>
           </div>
         </div>
