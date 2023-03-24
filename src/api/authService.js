@@ -24,8 +24,11 @@ const login = async (user) => {
     .concat(user.password);
 
   const res = await axios.post(URL);
+  if (res.data) sessionStorage.setItem("user", JSON.stringify(res.data.token));
   return res.data;
 };
+
+
 
 export const AuthService = {
   signup: signup,
