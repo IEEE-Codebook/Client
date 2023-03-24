@@ -7,6 +7,7 @@
 
 .main {
   background-color: white;
+  margin-top: 4.5em;
 }
 .row {
   height: 80em;
@@ -58,10 +59,8 @@
   height: 6em;
   padding-top: 0.8em;
 }
-.recent-submissions {
-  height: 26em;
-  padding: 1em;
-}
+
+.todo-list,
 .user-name,
 .rank,
 .points,
@@ -79,7 +78,8 @@
   height: 25em;
   margin: 1em;
 }
-.points {
+.points,
+.todo-list {
   margin-left: 1em;
   margin-right: 1em;
 }
