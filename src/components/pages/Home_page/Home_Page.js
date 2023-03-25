@@ -39,8 +39,9 @@ function Home_Page() {
         </div>
         <div className="card">
           <h2 className="card-title">Friends' Activity</h2>
+          <Home_Page_Friends_Submissions />
           <div className="card-content">
-            <p>Content for Friends' Activity</p>
+            <a href="/userSubmissions">Show More</a>
           </div>
         </div>
         <div className="card">
