@@ -8,7 +8,7 @@
 }
 
 .cbook_dark-mode {
-    background-color: #f3f1f1;
+    background-color: hsl(0, 0%, 20%);
     color: #fff;
 }
 
@@ -90,12 +90,12 @@
 */
 
 
-.image {
+.cbook_image {
     position: relative;
     top: 15px;
 }
 
-nav {
+.cbook_nav {
     display: flex;
     align-items: center;
     height: 70px;
@@ -108,9 +108,10 @@ nav {
     z-index: 1;
 }
 
-.right {
+.cbook_right {
     font-size: larger;
     position: relative;
+    color: white;
     left: 47rem;
     padding: 0px 25px;
 }
@@ -123,13 +124,13 @@ nav {
 
 }
 
-.codebook {
+.cbook_codebook {
     position: relative;
     top: 10px;
     font: bolder;
 }
 
-nav a {
+.cbook_nav a {
     margin-right: 1rem;
     text-decoration: none;
     color: white;

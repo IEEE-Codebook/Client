@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Navbar.css"
 import { useSelector } from "react-redux";
 
 const NavBar = () => {
@@ -13,7 +14,7 @@ const NavBar = () => {
           />
         </a>
         <a href="/">CODEBOOK</a>
-      </div>
+      </div> 
       {!user ? (
         <div className="nav-links">
           <a href="#0">About</a>

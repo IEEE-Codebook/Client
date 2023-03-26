@@ -5,10 +5,10 @@ import Home_Page_Contests from './Home_Page_Contests';
 function Home_Page() {
   return (
     <>
-          <nav>
+          {/* <nav className='cbook_nav'>
         <div className='cbook'>
-          <img src="https://cdn.xxl.thumbs.canstockphoto.com/code-book-logo-icon-design-eps-vector_csp63585084.jpg" className='image' height={"50px"} alt="" />
-          <div className='codebook'>
+          <img src="https://cdn.xxl.thumbs.canstockphoto.com/code-book-logo-icon-design-eps-vector_csp63585084.jpg" className='cbook_image' height={"50px"} alt="" />
+          <div className='cbook_codebook'>
         <a href="#" ><h1>CODEBOOK</h1></a>
         </div>
         
@@ -17,8 +17,8 @@ function Home_Page() {
           <a href="/profile">Profile</a>
           <a href="/about">About</a>
           <a href="#">Contact</a>
-        </div>
-      </nav>
+        </div> 
+      </nav> */}
 
     <div className="cbook_container cbook_dark-mode">
       <h1 className="cbook_title">Home Page</h1>

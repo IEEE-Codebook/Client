@@ -1,31 +1,10 @@
 
-
-/* body {
-    font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
-    color: #fff;
-    padding: 10px;
-   
-    background-color: gray;
-    text-align: center;
-   
-  } */
-  
   .contest h1 {
     
     font-size: 30px;
     padding: 10px;
   }
   
-  /* Form input */
-  /* input {
-    font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
-    width: 50%;
-    border: none;
-    padding: 4px;
-    outline: none;
-    font-size: 1.2em;
-    resize: none;
-  } */
   
   /* Form button */
   .contest_button[type="submit"] {
@@ -49,39 +28,7 @@
   }
   
   
-  .contest_table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 30px;
-  }
   
-  .contest_table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
-  .contest_table-header {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #ddd;
-    padding: 10px;
-  }
-  
-  .contest_table-row {
-    background-color: #f2f2f2;
-  }
-  
-  .contest_table-row:hover {
-    background-color: #ddd;
-  }
-  
-  .contest_table-data {
-    padding: 10px;
-    text-align: left;
-  }
   
   .contest_form-button:hover {
     background-color: #e3a412;
@@ -137,3 +84,46 @@
     color: #fff;
   }
   
+  
+  .contest_table-container {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  
+  
+  .contest_table-container .contest_table {
+    border-collapse: collapse;
+    margin: 1em auto;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contest_table-container .contest_th {
+    background-color: #008CBA;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  }
+  
+  .contest_td {
+    border: 1px solid #ddd;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.1em;
+  }
+  
+  .contest_table-container tr:hover {
+    background-color: #f5f5f5;
+  }
+  .contest_table td:first-child {
+    font-weight: bold;
+  }

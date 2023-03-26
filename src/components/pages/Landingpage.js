@@ -5,7 +5,7 @@ import "../../css/Landingpage.css"
 const Landingpage = () => {
   
   return (
-    <div className="App">
+    <div className="landing_App">
       <header>
         <h1>Welcome to CODEBOOK!</h1>
         <h3>Where coding is not just a skill, it's a passion!!</h3>
