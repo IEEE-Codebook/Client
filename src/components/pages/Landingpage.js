@@ -31,6 +31,7 @@ const Landingpage = () => {
       </section>
 
       {/* Features of using our website */}
+    <div class="feature_container">
       <div class="features">
         <h1>Features</h1>
       </div>
@@ -77,7 +78,7 @@ const Landingpage = () => {
           </div>
         </div>
       </div>
-
+    </div>
       {/* Suitable Footer */}
 
       <footer class="footer-distributed">

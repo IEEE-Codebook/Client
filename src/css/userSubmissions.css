@@ -23,7 +23,8 @@
 }
 
 .user-sub_table-container th {
-  background-color: #f2f2f2;
+  background-color: #008CBA;
+  color: white;
   text-align: center;
   padding: 0.5em;
   font-size: 1.2em;
