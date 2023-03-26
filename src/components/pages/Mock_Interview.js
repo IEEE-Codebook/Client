@@ -1,10 +1,10 @@
 import React from 'react'
-import "../css/Mock_Interview.css";
+import "../../css/Mock_Interview.css";
 const Mock_Interview = () => {
   return (
     <div className="App">
       {/* Navigation Bar */}
-      <nav>
+      <nav className='mi_nav'>
         <div className='cbook'>
           <img src="https://cdn.xxl.thumbs.canstockphoto.com/code-book-logo-icon-design-eps-vector_csp63585084.jpg" className='image' height={"50px"} alt="" />
           <div className='codebook'>
@@ -21,7 +21,7 @@ const Mock_Interview = () => {
       </nav>
 
       {/* Landing Header */}
-      <header>
+      <header className='mi_header'>
         <h1>Welcome to our Mock Interview Platform</h1>
         <p>Practice and prepare for your next interview with our virtual platform.</p>
         <div className="button-container">
@@ -35,7 +35,7 @@ const Mock_Interview = () => {
       </header>
 
       {/* Suitable Footer */}
-      <footer>
+      <footer className='mi_footer'>
         <p>CODEBOOK Mock Interview Platform.</p>
       </footer>
     </div>

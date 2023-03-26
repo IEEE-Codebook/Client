@@ -42,11 +42,11 @@ function RealApiCall(props) {
   }, [props.platformName]);
 
   return (
-    <div className="table-container">
+    <div className=".contest_table-container">
       {data.length > 0 ? (
         <>
           <h1>{props.platformName.charAt(0).toUpperCase() + props.platformName.slice(1)}</h1>
-          <table className="table">
+          <table className=".contest_table">
             <thead>
               <tr>
                 <th>Contest Name</th>

@@ -22,12 +22,12 @@ function Login() {
     navigate("/home");
   };
   return (
-    <div className="main-login">
-      <div className="LoginPage">
-        <div className="sub-login">
+    <div className="login_main-login">
+      <div className="login_LoginPage">
+        <div className="login_sub-login">
           <div>
-            <div className="imgs">
-              <div className="container-image"></div>
+            <div className="login_imgs">
+              <div className="login_container-image"></div>
             </div>
             <h1>Welcome to CodeBook!</h1>
             <br />
@@ -37,7 +37,7 @@ function Login() {
               <div>
                 <h5>Enter email:</h5>
                 <input
-                  className="input"
+                  className="login_input"
                   type="Email"
                   placeholder="email"
                   value={email}
@@ -48,17 +48,17 @@ function Login() {
                 <br />
                 <h5>Enter Password:</h5>
                 <input
-                  className="input"
+                  className="login_input"
                   type="password"
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPasword(e.target.value)}
                 />
               </div>
-              <div className="login-button">
+              <div className="login_login-button">
                 <br />
                 <button
-                  className="btn btn-outline-primary my-2 my-sm-0"
+                  className="login_btn login_btn-outline-primary my-2 my-sm-0"
                   type="submit"
                 >
                   Login
@@ -68,7 +68,7 @@ function Login() {
               </div>
             </form>
             <div>
-              <p className="link">
+              <p className="login_link">
                 Don't have an account? <a href="/signup">Sign Up</a> here!
               </p>
             </div>

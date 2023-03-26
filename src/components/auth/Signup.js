@@ -30,10 +30,10 @@ const Signup = () => {
   };
 
   return (
-    <div className="main-signup">
-      <div className="SignInPage">
-        <div className="sub-signin">
-          <div className="welcome">
+    <div className="signIn_main-signup">
+      <div className="signIn_SignInPage">
+        <div className="signIn_sub-signin">
+          <div className="signIn_welcome">
             <h1>Welcome to CodeBook!</h1>
             <br />
             <h1>SignUp</h1>
@@ -44,7 +44,7 @@ const Signup = () => {
               <h5>Enter your name:</h5>
               <input
                 type="name"
-                className="input"
+                className="signIn_input"
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -56,7 +56,7 @@ const Signup = () => {
               <h5>Enter your email:</h5>
               <input
                 type="email"
-                className="input"
+                className="signIn_input"
                 placeholder="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -68,7 +68,7 @@ const Signup = () => {
               <h5>Choose a strong password:</h5>
               <input
                 type="password"
-                className="input"
+                className="signIn_input"
                 placeholder="password"
                 value={password}
                 onChange={(e) => setPasword(e.target.value)}
@@ -79,7 +79,7 @@ const Signup = () => {
                 <input
                   type="text"
                   placeholder="CodeForces handle"
-                  className="input"
+                  className="signIn_input"
                   value={cf_handle}
                   onChange={(e) => setCF_handle(e.target.value)}
                 />
@@ -87,7 +87,7 @@ const Signup = () => {
               <br />
 
               <button
-                  className="btn btn-outline-primary my-2 my-sm-0"
+                  className="signIn_btn signIn_btn-outline-primary my-2 my-sm-0"
                   type="submit"
                 >
                   Sign Up

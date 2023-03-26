@@ -12,7 +12,7 @@ function Contests() {
     sp(platformName);
   }
   return ( 
-    <div>
+    <div className='contest'>
     <h1>Upcoming Contest List</h1>
     <Input clickee={setter} />
         <RealApiCall platformName={p}/>

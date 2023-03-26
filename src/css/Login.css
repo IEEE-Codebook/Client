@@ -1,18 +1,18 @@
-.main-login {
+.login_main-login {
   background-image: url(../images/code-bg.jpg);
   background-size: cover;
   background-position: center;
   font-family: "Courier New", Courier, monospace;
 }
 
-.LoginPage {
+.login_LoginPage {
   text-align: center;
   justify-content: center;
   display: flex;
   padding: 90px 0 90px 0;
   color: white;
 }
-.sub-login {
+.login_sub-login {
   display: flex;
   justify-content: center;
   height: 675px;
@@ -23,24 +23,24 @@
   background-color: rgb(28, 8, 82);
 }
 
-.imgs {
+.login_imgs {
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
-.container-image {
+.login_container-image {
   height: 115px;
   align-items: center;
   width: 115px;
 }
 
-.profile-image {
+.login_profile-image {
   height: 140px;
   width: 180px;
 }
 
-.google-signin-image-btn {
+.login_google-signin-image-btn {
   height: 25px;
   width: 25px;
 }
