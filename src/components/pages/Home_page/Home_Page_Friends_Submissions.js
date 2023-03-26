@@ -1,39 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import "../../../css/Home_Page.css";
 
-const Home_Page_Friends_Submissions = () => {
-  const handles=["fastenstar","shyamer3"];
-  const url ="";
-  handles.forEach((user_name)=>{
-     url =
-    "https://codeforces.com/api/user.status?handle=" +
-    user_name;
-  })
+const Home_Page_Submissions = () => {
+  const [data, setData] = useState([]);
 
- const [data, setData] = useState([]);
+  const handles = useMemo(() => ["shyamer3","adityachauhan2501"], []);
 
-useEffect(() => {
-  const fetchData = async () => {
-    const allData = await Promise.all(
-      handles.map((handle) =>
-        axios
-          .get(`https://codeforces.com/api/user.status?handle=${handle}`)
-          .then((response) =>
-            response.data.result
-              .sort(
-                (a, b) =>
-                  b.creationTimeSeconds - a.creationTimeSeconds
-              )
-              .slice(0, 5)
-          )
-      )
-    );
-    setData(allData.flat());
-  };
-  fetchData();
-}, [handles]);
-
+  useEffect(() => {
+    const fetchData = async () => {
+      const allData = await Promise.all(
+        handles.map((handle) =>
+          axios
+            .get(`https://codeforces.com/api/user.status?handle=${handle}`)
+            .then((response) => response.data.result)
+        )
+      );
+      setData(allData.flat().sort((a, b) => b.creationTimeSeconds - a.creationTimeSeconds).slice(0,10));
+    };
+    fetchData();
+  }, [handles]);
 
 
   const tableRows = data.map((submission) => (
@@ -80,4 +66,4 @@ useEffect(() => {
   );
 }
 
-export default Home_Page_Friends_Submissions
+export default Home_Page_Submissions;
