@@ -1,6 +1,25 @@
-import React from 'react'
-import "../css/Mock_Interview.css";
+import React, {useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSelector} from 'react-redux';
+import "../../css/Mock_Interview.css";
 const Mock_Interview = () => {
+  const navigate = useNavigate()
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+
+  useEffect(() => {
+    console.log(user)
+
+    if (!user) {
+      navigate('/login')
+      
+    }
+    else {
+      navigate('/rooms')
+    }
+  }, [user, navigate])
+
   return (
     <div className="App">
       {/* Navigation Bar */}
