@@ -2,9 +2,9 @@ import React from 'react'
 import "../../css/Mock_Interview.css";
 const Mock_Interview = () => {
   return (
-    <div className="App">
+    <div className="mi_App">
       {/* Navigation Bar */}
-      <nav className='mi_nav'>
+      {/* <nav className='mi_nav'>
         <div className='cbook'>
           <img src="https://cdn.xxl.thumbs.canstockphoto.com/code-book-logo-icon-design-eps-vector_csp63585084.jpg" className='image' height={"50px"} alt="" />
           <div className='codebook'>
@@ -18,7 +18,7 @@ const Mock_Interview = () => {
           <a href="#">Contact</a>
         </div>
         
-      </nav>
+      </nav> */}
 
       {/* Landing Header */}
       <header className='mi_header'>

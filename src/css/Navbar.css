@@ -8,13 +8,21 @@
 } */
 
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   background-color:black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-fixed-top{
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1030;
 }
 
 .logo-text {

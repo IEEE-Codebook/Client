@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const NavBar = () => {
   const { user } = useSelector((state) => state.auth);
   return (
-    <nav>
+    <nav className="navbar navbar-fixed-top">
       <div className="logo-text">
         <a href="/">
           <img

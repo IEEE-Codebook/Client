@@ -18,8 +18,8 @@ function UserSubmission() {
 
   const tableRows = data.map((submission) => (
     <tr key={submission.id}>
-      <td>{new Date(submission.creationTimeSeconds * 1000).toLocaleString()}</td>
-      <td>
+      <td className="user-sub_td">{new Date(submission.creationTimeSeconds * 1000).toLocaleString()}</td>
+      <td className="user-sub_td">
         <a
           href={`https://codeforces.com/problemset/problem/${submission.problem.contestId}/${submission.problem.index}`}
           target="_blank"
