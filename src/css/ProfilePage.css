@@ -1,26 +1,26 @@
-.html,
-.body {
+.profilePage_html,
+.profilePage_body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-.main {
+.profilePage_main {
   background-color: white;
   margin-top: 4.5em;
 }
-.row {
+.profilePage_row {
   height: 80em;
   width: 100%;
 }
 
-.col-md-3 {
+.profilePage_col-md-3 {
   height: 80em;
   border-radius: 1em;
   background-size: cover;
 }
 
-.ratings {
+.profilePage_ratings {
   background-color: whitesmoke;
   border-radius: 2em;
   padding: 1em;
@@ -28,10 +28,10 @@
   padding: 1em;
   margin: 1em;
 }
-.card {
+.profilePage_card {
   height: 83em;
 }
-.recent-submissions {
+.profilePage_recent-submissions {
   background-color: whitesmoke;
   border-radius: 2em;
   padding: 1em;
@@ -39,47 +39,48 @@
   padding: 1em;
   margin: 1em;
 }
-.connected-profiles {
+.profilePage_connected-profiles {
   background-color: rgb(255, 238, 52);
   border-radius: 2em;
   padding: 1em;
   height: 20em;
   margin: 1em;
 }
-.mail-pref {
+.profilePage_mail-pref {
   background-color: rgb(255, 238, 52);
   border-radius: 2em;
   padding: 1em;
   height: 20em;
   margin: 1em;
 }
-.delete-account {
+.profilePage_delete-account {
   background-color: red;
   text-align: center;
   height: 6em;
   padding-top: 0.8em;
 }
-
-.todo-list,
-.user-name,
-.rank,
-.points,
-.badge,
-.friends {
+.profilePage_recent-submissions {
+  height: 26em;
+  padding: 1em;
+}
+.profilePage_user-name,
+.profilePage_rank,
+.profilePage_points,
+.profilePage_badge,
+.profilePage_friends {
   background-color: rgb(255, 238, 52);
   height: 16em;
   border-radius: 2em;
   padding: 1em;
 }
-.rounded-circle {
+.profilePage_rounded-circle {
   height: 20em;
 }
-.badge {
+.profilePage_badge {
   height: 25em;
   margin: 1em;
 }
-.points,
-.todo-list {
+.profilePage_points {
   margin-left: 1em;
   margin-right: 1em;
 }

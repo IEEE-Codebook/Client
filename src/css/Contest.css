@@ -1,34 +1,13 @@
 
-
-body {
-    font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
-    color: #fff;
-    padding: 10px;
-   
-    background-color: gray;
-    text-align: center;
-   
-  }
-  
-  h1 {
+  .contest h1 {
     
     font-size: 30px;
     padding: 10px;
   }
   
-  /* Form input */
-  input {
-    font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
-    width: 50%;
-    border: none;
-    padding: 4px;
-    outline: none;
-    font-size: 1.2em;
-    resize: none;
-  }
   
   /* Form button */
-  button[type="submit"] {
+  .contest_button[type="submit"] {
     font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
     background: #f5ba13;
     margin: 10px;
@@ -43,52 +22,20 @@ body {
   }
   
   /* Form button hover */
-  button[type="submit"]:hover {
+  .contest_button[type="submit"]:hover {
     background-color: #e3a412;
     transition: background-color 0.3s ease-in-out;
   }
   
   
-  .table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 30px;
-  }
   
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
   
-  .table-header {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #ddd;
-    padding: 10px;
-  }
-  
-  .table-row {
-    background-color: #f2f2f2;
-  }
-  
-  .table-row:hover {
-    background-color: #ddd;
-  }
-  
-  .table-data {
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .form-button:hover {
+  .contest_form-button:hover {
     background-color: #e3a412;
     transition: background-color 0.3s ease-in-out;
   }
   /* Select dropdown */
-  select {
+  .contest_select {
     font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
     width: 50%;
     border: none;
@@ -104,12 +51,12 @@ body {
   }
   
   /* Dropdown arrow */
-  select::-ms-expand {
+  .contest_select::-ms-expand {
     display: none;
   }
   
-  select::before,
-  select::after {
+  .contest_select::before,
+  .contest_select::after {
     content: "";
     position: absolute;
     right: 10px;
@@ -121,19 +68,63 @@ body {
     pointer-events: none;
   }
   
-  select::after {
+  .contest_select::after {
     border-top-color: #f2f2f2;
     margin-top: 3px;
   }
   
   /* Hover */
-  select:hover {
+  .contest_select:hover {
     background-color: #ddd;
   }
   
   /* Selected option */
-  option[selected] {
+  .contest_option[selected] {
     background-color: #f5ba13;
     color: #fff;
   }
   
+  
+  .contest_table-container {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+    /* margin: auto; */ 
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  
+  
+  .contest_table-container .contest_table {
+    border-collapse: collapse;
+    margin: 1em auto;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contest_table-container .contest_th {
+    background-color: #008CBA;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  }
+  
+  .contest_td {
+    border: 1px solid #ddd;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.1em;
+  }
+  
+  .contest_table-container tr:hover {
+    background-color: #f5f5f5;
+  }
+  .contest_table td:first-child {
+    font-weight: bold;
+  }

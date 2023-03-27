@@ -7,7 +7,7 @@ function RealApiCall(props) {
 
   useEffect(() => {
     let url;
-    switch (props.platformName) {
+    switch (props.platformName) { 
       case "codeforces":
         url = "https://kontests.net/api/v1/codeforces";
         break;
@@ -42,17 +42,17 @@ function RealApiCall(props) {
   }, [props.platformName]);
 
   return (
-    <div className="table-container">
+    <div className="contest_table-container">
       {data.length > 0 ? (
         <>
           <h1>{props.platformName.charAt(0).toUpperCase() + props.platformName.slice(1)}</h1>
-          <table className="table">
+          <table className="contest_table">
             <thead>
               <tr>
-                <th>Contest Name</th>
-                <th>Duration (in hours)</th>
-                <th>Start Date</th>
-                <th>Start Time (UTC)</th>
+                <th className="contest_th">Contest Name</th>
+                <th className="contest_th">Duration (in hours)</th>
+                <th className="contest_th">Start Date</th>
+                <th className="contest_th">Start Time (UTC)</th>
               </tr>
             </thead>
             <tbody>
@@ -67,10 +67,10 @@ function RealApiCall(props) {
                 });
                 return (
                   <tr key={item.id}>
-                    <td>{item.name}</td>
-                    <td>{duration}</td>
-                    <td>{date}</td>
-                    <td>{startTimeString}</td>
+                    <td className="contest_td">{item.name}</td>
+                    <td className="contest_td">{duration}</td>
+                    <td className="contest_td">{date}</td>
+                    <td className="contest_td">{startTimeString}</td>
                   </tr>
                 );
               })}

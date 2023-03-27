@@ -1,17 +1,17 @@
-.SignInPage {
+.signIn_SignInPage {
   text-align: center;
   justify-content: center;
   display: flex;
   padding: 90px 0 90px 0;
 }
-.main-signup {
+.signIn_main-signup {
   background-image: url(../images/code-bg.jpg);
   background-size: cover;
   background-position: center;
   font-family: "Courier New", Courier, monospace;
   color: white;
 }
-.sub-signin {
+.signIn_sub-signin {
   display: flex;
   justify-content: center;
   height: fit-content;
@@ -21,35 +21,35 @@
   background-color: rgb(28, 8, 82);
 }
 
-.welcome {
+.signIn_welcome {
   padding-top: 20px;
 }
 
-.input {
+.signIn_input {
   border-radius: 20px;
   width: 100%;
   padding: 10px;
   border: 1px solid #999;
 }
 
-.imgs {
+.signIn_imgs {
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
-.container-image {
+.signIn_container-image {
   height: 115px;
   align-items: center;
   width: 115px;
 }
 
-.profile-image {
+.signIn_profile-image {
   height: 140px;
   width: 180px;
 }
 
-.google-signin-image-btn {
+.signIn_google-signin-image-btn {
   height: 25px;
   width: 25px;
 }

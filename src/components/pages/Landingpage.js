@@ -1,18 +1,16 @@
 import React from "react";
 
-import "../../css/Landingpage.css"
+import "../../css/Landingpage.css";
 
 const Landingpage = () => {
-  
   return (
-    <div className="App">
+    <div className="landing_App">
       <header>
         <h1>Welcome to CODEBOOK!</h1>
         <h3>Where coding is not just a skill, it's a passion!!</h3>
         <br />
-
-        <h5>Join the amazing community of </h5><h3>10,000+</h3> <h5> coders!!</h5>
-
+        <h5>Join the amazing community of </h5>
+        <h3>10,000+</h3> <h5> coders!!</h5>
       </header>
 
       {/* User Count */}
@@ -29,55 +27,54 @@ const Landingpage = () => {
           <span className="link-text"></span>
         </a>
       </section>
+      <div className="feature_container">
+        <div className="features">
+          <h1>Features</h1>
+        </div>
+        <div className="container">
+          <div className="card">
+            <div className="box">
+              <div className="content">
+                <h2>#1</h2>
+                <h3>Upcoming Contests</h3>
+                <p>
+                  Get to know the details about upcoming contests happening on
+                  various coding platforms
+                </p>
+                <a href="/upcomingContests">Know More</a>
+              </div>
+            </div>
+          </div>
 
-      {/* Features of using our website */}
-      <div className="features">
-        <h1>Features</h1>
+          <div className="card">
+            <div className="box">
+              <div className="content">
+                <h2>#2</h2>
+                <h3>Challenges and Quizzes</h3>
+                <p>
+                  Get to practice challenges and quizzes and get to know your
+                  rankings amongst your peers
+                </p>
+                <a href="#0">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="box">
+              <div className="content">
+                <h2>#3</h2>
+                <h3>Code Collaboration</h3>
+                <p>
+                  Work with others in real time to complete projects and learn
+                  together
+                </p>
+                <a href="#0">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="container">
-        <div className="card">
-          <div className="box">
-            <div className="content">
-              <h2>#1</h2>
-              <h3>Upcoming Contests</h3>
-              <p>
-                Get to know the details about upcoming contests happening on
-                various coding platforms
-              </p>
-              <a href="/upcomingContests">Know More</a>
-            </div>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="box">
-            <div className="content">
-              <h2>#2</h2>
-              <h3>Challenges and Quizzes</h3>
-              <p>
-                Get to practice challenges and quizzes and get to know your
-                rankings amongst your peers
-              </p>
-              <a href="#0">Know More</a>
-            </div>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="box">
-            <div className="content">
-              <h2>#3</h2>
-              <h3>Code Collaboration</h3>
-              <p>
-                Work with others in real time to complete projects and learn
-                together
-              </p>
-              <a href="#0">Know More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Suitable Footer */}
 
       <footer className="footer-distributed">
@@ -91,8 +88,9 @@ const Landingpage = () => {
           <h3>CODEBOOK</h3>
 
           <div className="footer-links">
-            <a href="#0">Home</a>      ·              <a href="#0">Blog</a>   ·   <a href="#0">About</a>   ·   
-            <a href="#0">Faq</a>   ·   <a href="#0">Contact</a>
+            <a href="#0">Home</a> · <a href="#0">Blog</a> ·{" "}
+            <a href="#0">About</a> ·<a href="#0">Faq</a> ·{" "}
+            <a href="#0">Contact</a>
           </div>
 
           <div className="footer-icons">
@@ -133,8 +131,5 @@ const Landingpage = () => {
     </div>
   );
 };
-
-      
-    
 
 export default Landingpage;

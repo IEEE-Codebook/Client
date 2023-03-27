@@ -2,6 +2,9 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { logout } from "../api/authSlice";
+import "../css/Navbar.css";
+import { useSelector } from "react-redux";
+
 const NavBar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -11,7 +14,7 @@ const NavBar = () => {
     navigate("/");
   };
   return (
-    <nav>
+    <nav className="navbar navbar-fixed-top">
       <div className="logo-text">
         <a href="/">
           <img

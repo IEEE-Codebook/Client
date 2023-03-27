@@ -18,8 +18,8 @@ function UserSubmission() {
 
   const tableRows = data.map((submission) => (
     <tr key={submission.id}>
-      <td>{new Date(submission.creationTimeSeconds * 1000).toLocaleString()}</td>
-      <td>
+      <td className="user-sub_td">{new Date(submission.creationTimeSeconds * 1000).toLocaleString()}</td>
+      <td className="user-sub_td">
         <a
           href={`https://codeforces.com/problemset/problem/${submission.problem.contestId}/${submission.problem.index}`}
           target="_blank"
@@ -28,15 +28,15 @@ function UserSubmission() {
           {submission.problem.name}
         </a>
       </td>
-      <td>{submission.programmingLanguage}</td>
-      <td>{submission.verdict}</td>
-      <td>{submission.timeConsumedMillis} ms</td>
-      <td>{submission.memoryConsumedBytes / 1024} KB</td>
+      <td className="user-sub_td">{submission.programmingLanguage}</td>
+      <td className="user-sub_td">{submission.verdict}</td>
+      <td className="user-sub_td">{submission.timeConsumedMillis} ms</td>
+      <td className="user-sub_td">{submission.memoryConsumedBytes / 1024} KB</td>
     </tr>
   ));
 
   return (
-    <div className="table-container">
+    <div className="user-sub_table-container">
       <h1>fastenstar Submissions</h1>
       <table>
         <thead>
