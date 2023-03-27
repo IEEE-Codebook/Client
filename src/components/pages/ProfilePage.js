@@ -10,8 +10,14 @@ const ProfilePage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
-  const {isError,message } =
-    useSelector((state) => state.profile);
+  const {
+    name,
+    email,
+    codeforces,
+    following,
+    isError,
+    message,
+  } = useSelector((state) => state.profile);
 
   useEffect(() => {
     if (isError) console.log(message);
@@ -31,12 +37,11 @@ const ProfilePage = () => {
               />
               <div className="user-name-profile mt-3">
                 <div className="user-name">
-                  <h3>Name</h3>
-
-                  <h3>NickName</h3>
+                  <h3>{name}</h3>
+                  <h3>{email}</h3>
                 </div>
                 <div className="friends mt-5">
-                  <h3># of friends</h3>
+                  <h3>{following.length}</h3>
                 </div>
                 <div className="rank mt-5">
                   <h3>Rank</h3>
@@ -65,7 +70,7 @@ const ProfilePage = () => {
               <h4>ratings</h4>
             </div>
             <div className="connected-profiles mt-3">
-              <h4>connected profiles</h4>
+              <h4>codeforces = {codeforces}</h4>
             </div>
             <div className="mail-pref mt-3">
               <h4>mail preferences</h4>

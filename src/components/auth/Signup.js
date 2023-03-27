@@ -22,7 +22,6 @@ const Signup = () => {
       codeforces: cf_handle,
     };
     dispatch(signup(user));
-    console.log(user);
     setName("");
     setPasword("");
     setEmail("");
@@ -37,7 +36,6 @@ const Signup = () => {
     if(isSuccess || user)
       navigate("/home")
     
-    dispatch(reset())
   },[user,isError,isSuccess,message,navigate,dispatch])
   
   if(isLoading){

@@ -2,8 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { ProfileService } from "./profileService";
 
 const initialState = {
-  userProfile: null,
-  otherProfile: null,
+  name: "",
+  email: "",
+  codeforces:"",
+  following: "",
+  isRetirieved: false,
   isError: false,
   isLoading: false,
   message: "",
@@ -31,8 +34,10 @@ export const profileSlice = createSlice({
   initialState,
   reducers: {
     reset: (state) => {
-      state.userProfile = null;
-      state.otherProfile = null;
+      state.name = "";
+      state.email = "";
+      state.following = "";
+      state.isRetirieved = false;
       state.isError = false;
       state.isLoading = false;
       state.message = "";
@@ -45,7 +50,11 @@ export const profileSlice = createSlice({
       })
       .addCase(getProfile.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.userProfile = action.payload;
+        state.name = action.payload.name;
+        state.email = action.payload.email;
+        state.codeforces = action.payload.codeforces;
+        state.isRetirieved = true;
+        state.following = action.payload.following;
       })
       .addCase(getProfile.rejected, (state, action) => {
         state.isLoading = false;

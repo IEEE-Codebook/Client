@@ -5,12 +5,10 @@ import { logout } from "../api/authSlice";
 const NavBar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
-  );
+  const { user } = useSelector((state) => state.auth);
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/")
+    navigate("/");
   };
   return (
     <nav>
@@ -30,7 +28,7 @@ const NavBar = () => {
         </div>
       ) : (
         <div className="nav-links">
-          <a href="/profile">profile</a>
+          <a href="/profile/me">profile</a>
           <button onClick={handleLogout}> logout</button>
         </div>
       )}

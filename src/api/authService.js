@@ -8,12 +8,13 @@ const signup = async (user) => {
     .concat("&password=")
     .concat(user.password).concat("&codeforces=").concat(user.codeforces);
   const res = await axios.post(URL);
-
+  const u = res.data;
   if (res.data) {
+
     sessionStorage.setItem("user", JSON.stringify(res.data.token));
-    console.log(res.data)
+    console.log(u)
   }
-  return res.data;
+  return u;
 };
 
 const logout = async () => {
@@ -27,8 +28,9 @@ const login = async (user) => {
     .concat(user.password);
 
   const res = await axios.post(URL);
-  if (res.data) sessionStorage.setItem("user", JSON.stringify(res.data));
-  return res.data;
+  const u = res.data;
+  if (res.data) sessionStorage.setItem("user", JSON.stringify(res.data.token));
+  return u;
 };
 
 

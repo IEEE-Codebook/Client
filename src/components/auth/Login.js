@@ -22,8 +22,6 @@ function Login() {
       alert(message);
     }
     if (user) navigate("/home");
-
-    dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const handleSubmit = (e) => {
