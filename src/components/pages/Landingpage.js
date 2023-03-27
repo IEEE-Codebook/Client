@@ -117,7 +117,7 @@ const Landingpage = () => {
                 height={"50px"}
                 alt=""
               />
-            </a>
+            </a> 
           </div>
         </div>
 
