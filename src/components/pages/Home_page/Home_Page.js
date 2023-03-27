@@ -4,22 +4,7 @@ import Home_Page_Submissions from './Home_Page_Submissions';
 import Home_Page_Contests from './Home_Page_Contests';
 function Home_Page() {
   return (
-    <>
-          <nav>
-        <div className='cbook'>
-          <img src="https://cdn.xxl.thumbs.canstockphoto.com/code-book-logo-icon-design-eps-vector_csp63585084.jpg" className='image' height={"50px"} alt="" />
-          <div className='codebook'>
-        <a href="#" ><h1>CODEBOOK</h1></a>
-        </div>
-        
-        </div>
-        <div className='right'>
-          <a href="/profile">Profile</a>
-          <a href="/about">About</a>
-          <a href="#">Contact</a>
-        </div>
-      </nav>
-
+  
     <div className="container dark-mode">
       <h1 className="title">Home Page</h1>
       <div className="card-grid">
@@ -51,7 +36,6 @@ function Home_Page() {
         </div>
       </div>
     </div>
-    </>
   );
 }
 

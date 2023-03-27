@@ -1,15 +1,30 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router";
-import {login} from "../../api/authSlice"
+import { login, reset } from "../../api/authSlice";
+import Spinner from "../Spinner";
 import "../../css/Login.css";
+import { useEffect } from "react";
 
 function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [password, setPasword] = useState("");
   const [email, setEmail] = useState("");
+
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+  useEffect(() => {
+    console.log(user);
+    if (isError) {
+      alert(message);
+    }
+    if (user) navigate("/home");
+
+    dispatch(reset());
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,10 +33,13 @@ function Login() {
       password: password,
     };
     dispatch(login(user));
-    setEmail("")
-    setPasword("")
-    navigate("/home");
+    setEmail("");
+    setPasword("");
   };
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <div className="main-login">
       <div className="LoginPage">

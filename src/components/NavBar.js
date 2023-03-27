@@ -1,8 +1,17 @@
 import React from "react";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
+import { logout } from "../api/authSlice";
 const NavBar = () => {
-  const { user } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/")
+  };
   return (
     <nav>
       <div className="logo-text">
@@ -16,15 +25,13 @@ const NavBar = () => {
       </div>
       {!user ? (
         <div className="nav-links">
-          <a href="#0">About</a>
           <a href="/login">Login</a>
           <a href="/signup">Signup</a>
         </div>
       ) : (
         <div className="nav-links">
           <a href="/profile">profile</a>
-
-          <a href="/signup">logout</a>
+          <button onClick={handleLogout}> logout</button>
         </div>
       )}
     </nav>

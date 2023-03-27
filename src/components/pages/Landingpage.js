@@ -22,22 +22,22 @@ const Landingpage = () => {
           <h3 className="head3">10,000+</h3>
           <h4 className="head4">Users</h4>
         </a>
-        <a href="#0" class="data-card">
+        <a href="#0" className="data-card">
           <h3 className="head3">5,000+</h3>
           <h4 className="head4">Daily Logins</h4>
 
-          <span class="link-text"></span>
+          <span className="link-text"></span>
         </a>
       </section>
 
       {/* Features of using our website */}
-      <div class="features">
+      <div className="features">
         <h1>Features</h1>
       </div>
-      <div class="container">
-        <div class="card">
-          <div class="box">
-            <div class="content">
+      <div className="container">
+        <div className="card">
+          <div className="box">
+            <div className="content">
               <h2>#1</h2>
               <h3>Upcoming Contests</h3>
               <p>
@@ -49,9 +49,9 @@ const Landingpage = () => {
           </div>
         </div>
 
-        <div class="card">
-          <div class="box">
-            <div class="content">
+        <div className="card">
+          <div className="box">
+            <div className="content">
               <h2>#2</h2>
               <h3>Challenges and Quizzes</h3>
               <p>
@@ -63,9 +63,9 @@ const Landingpage = () => {
           </div>
         </div>
 
-        <div class="card">
-          <div class="box">
-            <div class="content">
+        <div className="card">
+          <div className="box">
+            <div className="content">
               <h2>#3</h2>
               <h3>Code Collaboration</h3>
               <p>
@@ -80,8 +80,8 @@ const Landingpage = () => {
 
       {/* Suitable Footer */}
 
-      <footer class="footer-distributed">
-        <div class="footer-left">
+      <footer className="footer-distributed">
+        <div className="footer-left">
           <img
             src="https://cdn.xxl.thumbs.canstockphoto.com/code-book-logo-icon-design-eps-vector_csp63585084.jpg"
             className="image"
@@ -90,12 +90,12 @@ const Landingpage = () => {
           />
           <h3>CODEBOOK</h3>
 
-          <div class="footer-links">
-            <a href="#">Home</a>      ·              <a href="#">Blog</a>   ·   <a href="#">About</a>   ·   
-            <a href="#">Faq</a>   ·   <a href="#">Contact</a>
+          <div className="footer-links">
+            <a href="#0">Home</a>      ·              <a href="#0">Blog</a>   ·   <a href="#0">About</a>   ·   
+            <a href="#0">Faq</a>   ·   <a href="#0">Contact</a>
           </div>
 
-          <div class="footer-icons">
+          <div className="footer-icons">
             <a href="#0">
               <img
                 src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/twitter-round-icon.png"
@@ -120,7 +120,7 @@ const Landingpage = () => {
           </div>
         </div>
 
-        <div class="footer-right">
+        <div className="footer-right">
           <p>Contact Us</p>
 
           <form action="#" method="post">

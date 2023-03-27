@@ -6,7 +6,7 @@ const signup = async (user) => {
     .concat("&email=")
     .concat(user.email)
     .concat("&password=")
-    .concat(user.password);
+    .concat(user.password).concat("&codeforces=").concat(user.codeforces);
   const res = await axios.post(URL);
 
   if (res.data) sessionStorage.setItem("user", JSON.stringify(res.data.token));
@@ -24,7 +24,7 @@ const login = async (user) => {
     .concat(user.password);
 
   const res = await axios.post(URL);
-  if (res.data) sessionStorage.setItem("user", JSON.stringify(res.data.token));
+  if (res.data) sessionStorage.setItem("user", JSON.stringify(res.data));
   return res.data;
 };
 

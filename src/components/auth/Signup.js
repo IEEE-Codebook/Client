@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import { signup } from "../../api/authSlice";
+import { signup,reset } from "../../api/authSlice";
 import "../../css/SignIn.css";
 import "../../images/code-bg.jpg";
+import Spinner from "../Spinner";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -28,7 +29,21 @@ const Signup = () => {
     setCF_handle("");
     navigate("/home")
   };
-
+  const {user,isError,isLoading,isSuccess,message} = useSelector((state)=> state.auth)
+  useEffect( () => {
+    if(isError){
+      alert(message);
+    }
+    if(isSuccess || user)
+      navigate("/home")
+    
+    dispatch(reset())
+  },[user,isError,isSuccess,message,navigate,dispatch])
+  
+  if(isLoading){
+    return <Spinner/>
+  }
+  
   return (
     <div className="main-signup">
       <div className="SignInPage">
