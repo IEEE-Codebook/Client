@@ -5,12 +5,15 @@ import axios from "axios";
 import InputBox from './EditorInputBox';
 import { useSnackbar } from 'notistack';
 import { socket} from "../../socket";
+import "../../css/Room.css"
 
 import 'react-reflex/styles.css'
-import VideoChat from './VideoChat/VideoChat';
+
+import Video from './VideoChat/Video';
+import { useParams } from 'react-router';
 
 const Room = (props) => {
-
+	const {roomID} = useParams();
 	const getLanguageVersion = {
 		cpp17: "0", // g++ 17 GCC 9.10
 		java: "3", // JDK 11.0.4
@@ -98,8 +101,7 @@ const Room = (props) => {
 
 	return (
 		<div>
-			<VideoChat></VideoChat>
-			<div className="d-flex">
+			<div style={{width:"100%", height:"77vh"}}>
 				<MyEditor
 					socket={socket}
 					nameOfUser={props.nameOfUser}
@@ -112,19 +114,22 @@ const Room = (props) => {
 				>
 				</MyEditor>
 			</div>
-			
-			<div className="d-flex">
-				<div className="border mr-auto ml-1" style={{width:"37.5%"}}>
-					<InputBox feature="Input" theme={RoomTheme} setProperty={setInput} fontSize={RoomFontSize}/>
+
+			<div >
+				<div class="parent">
+					<div className="child1">
+						<InputBox feature="Input" theme={RoomTheme} setProperty={setInput} fontSize={RoomFontSize}/>
+					</div>
+					<div className="child1">
+						<Box feature={isError?"Error":"Output"} theme={RoomTheme} value={output} fontSize={RoomFontSize}/>
+					</div>
+					<div className="child2">
+						<Box feature="Stats" theme={RoomTheme} value={stats} fontSize={RoomFontSize}/>
+					</div>
+					
 				</div>
-				<div className="border" style={{width:"37.5%"}}>
-					<Box feature={isError?"Error":"Output"} theme={RoomTheme} value={output} fontSize={RoomFontSize}/>
-				</div>
-				<div className="border ml-auto mr-1" style={{width:"24%"}}>
-					<Box feature="Stats" theme={RoomTheme} value={stats} fontSize={RoomFontSize}/>
-				</div>
-				
 			</div>
+
 		</div>
 	)
 }

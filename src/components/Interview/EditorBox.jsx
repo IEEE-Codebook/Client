@@ -11,7 +11,7 @@ const Box = (props) => {
             <section>
             <Editor
                 defaultLanguage="plaintext"
-                height="21vh"
+                height="22vh"
                 theme={props.theme}
                 defaultValue=""
                 value={props.value}
