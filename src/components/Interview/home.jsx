@@ -60,7 +60,7 @@ const Interview_Home = (props) => {
             <header>
                 <div className="container">
                 <div className="banner-text">
-                    <h2>Hey!! 
+                    <h2>Hey {user.name}!! 
                         <Typewriter
                             onInit={(typewriter)=>{
                                 typewriter
@@ -88,11 +88,10 @@ const Interview_Home = (props) => {
                     </div>
                 </div>
             </header>
-            <div className="container">
-                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog">
                         <div className="modal-content">
-                            <div className="modal-header">
+                        <div className="modal-header">
                                 <h5 className="modal-title" id="exampleModalLabel">Join Room</h5>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -110,7 +109,6 @@ const Interview_Home = (props) => {
                                             value = {joinRoom}
                                             onChange = {(e)=>{
                                                 setJoinRoom(e.target.value);
-                                                console.log("jR-->"+joinRoom);
                                             }} />
                                     </div>
                                 </form>
@@ -122,7 +120,6 @@ const Interview_Home = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     );
 

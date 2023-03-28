@@ -19,6 +19,7 @@ import { NavLink} from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Messages from "./Chat/Messages";
 import Input from "./Chat/Input"
+import Video from './VideoChat/Video';
 
 
 const MyEditor = (props) => {
@@ -46,6 +47,7 @@ const MyEditor = (props) => {
     );
 
     let { id } = useParams();
+	console.log("Editor id", id);
 
     useEffect(() => {
 		if (socket===undefined) {
@@ -272,14 +274,14 @@ const MyEditor = (props) => {
   	};
 
     return (
-        <div className="w-100">
+        <div >
 
 				<nav className="navbar navbar-expand-lg navbar-light bg-white shadow mb-1 py-0">
 					<NavLink className="navbar-brand" to="/" onClick={leaveRoom}>CodeBook</NavLink>
 					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span>
 					</button>
-					<form class="d-flex">
+					<form >
 						<input class="form-control me-2" type="text" placeholder="Enter file name here" aria-label="Search" value={titleInfo} onChange={titleUpdating} />
 						{titleChange === true &&
 							<button className="btn ml-2 btn-outline-success">
@@ -381,7 +383,7 @@ const MyEditor = (props) => {
 				</nav>
 
 				<div className="d-flex">
-					<section className="mr-auto ml-1" style={{width:"68.5%"}}>
+					<section className="mr-auto ml-1" style={{width:"50vw"}}>
 						<Editor
 							height="65vh"
 							width="100%"
@@ -394,11 +396,12 @@ const MyEditor = (props) => {
 							options={{ fontSize: fontsize}}
 						/>
 					</section>
-					<section className="ml-auto mr-1 d-flex" style={{width:"30.5%"}}>
-						<div className="mr-auto d-flex flex-column border border-warning" style={{ minWidth: "60vh", width:"100%", height: "65vh", backgroundColor: "white", borderRadius: "20px"}}>
-							<Messages messages={messages} nameOfUser={props.nameOfUser}>
+					<section className="ml-auto mr-1 d-flex" style={{width:"50vw"}}>
+						<div className="mr-auto d-flex flex-column border border-warning" style={{ minWidth: "60vh", width:"100%", height: "65vh", backgroundColor: "grey", }}>
+							{/* <Messages messages={messages} nameOfUser={props.nameOfUser}>
 							</Messages>
-							<Input message={message} setMessage={setMessage} sendMessage={sendMessage}></Input>
+							<Input message={message} setMessage={setMessage} sendMessage={sendMessage}></Input> */}
+							<Video id ={id}></Video>
 						</div>
 					</section>
 
