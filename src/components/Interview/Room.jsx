@@ -8,7 +8,7 @@ import { socket} from "../../socket";
 import "../../css/Room.css"
 
 import 'react-reflex/styles.css'
-import VideoChat from './VideoChat/VideoChat';
+
 import Video from './VideoChat/Video';
 import { useParams } from 'react-router';
 
