@@ -1,17 +1,22 @@
 import React from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { logout } from "../api/authSlice";
 import "../css/Navbar.css";
-import { useSelector } from "react-redux";
 
 const NavBar = () => {
+  const [searchUser, setSearchUser] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const handleLogout = () => {
     dispatch(logout());
     navigate("/");
+  };
+  const handleSearch = () => {
+    // alert(searchUser);
+    navigate(`/profile/${searchUser}`);
   };
   return (
     <nav className="navbar navbar-fixed-top">
@@ -24,17 +29,35 @@ const NavBar = () => {
         </a>
         <a href="/">CODEBOOK</a>
       </div>
-      {!user ? (
-        <div className="nav-links">
-          <a href="/login">Login</a>
-          <a href="/signup">Signup</a>
+      <div className="left-navbar">
+        <div class="input-group">
+          <input
+            type="text"
+            class="input"
+            id="Email"
+            name="Email"
+            placeholder="username"
+            autocomplete="off"
+            onChange={(e) => setSearchUser(e.target.value)}
+          />
+          <buttton
+            class="button--submit"
+            value="Search"
+            onClick={handleSearch}
+          >Search</buttton>
         </div>
-      ) : (
-        <div className="nav-links">
-          <a href="/profile/me">profile</a>
-          <button onClick={handleLogout}> logout</button>
-        </div>
-      )}
+        {!user ? (
+          <div className="nav-links">
+            <a href="/login">Login</a>
+            <a href="/signup">Signup</a>
+          </div>
+        ) : (
+          <div className="nav-links">
+            <a href="/profile/me">profile</a>
+            <button onClick={handleLogout}> logout</button>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
