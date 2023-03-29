@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
 import "../../../css/Home_Page.css";
-import Home_Page_Submissions from './Home_Page_Submissions';
-import Home_Page_Contests from './Home_Page_Contests';
+import Home_Page_Submissions from "./Home_Page_Submissions";
+import Home_Page_Contests from "./Home_Page_Contests";
+import FriendsSubmission from "./FriendsSubmission";
 function Home_Page() {
   return (
     <div className="cbook_container cbook_dark-mode">
@@ -18,13 +19,14 @@ function Home_Page() {
           <h2 className="cbook_card-title">Recent Submissions</h2>
           <Home_Page_Submissions />
           <div className="cbook_card-content">
-          <a href="/userSubmissions">Show More</a>
+            <a href="/userSubmissions">Show More</a>
           </div>
         </div>
         <div className="cbook_card">
           <h2 className="cbook_card-title">Friends' Activity</h2>
+          <FriendsSubmission />
           <div className="cbook_card-content">
-            <p>Content for Friends' Activity</p>
+            <a href="/friendSubmissions">Show More</a>
           </div>
         </div>
         <div className="cbook_card">

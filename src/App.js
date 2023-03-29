@@ -13,6 +13,7 @@ import UserSubmission from "./components/pages/userSubmissions";
 import Mock_Interview from "./components/pages/Mock_Interview";
 import { useState } from "react";
 import FriendProfile from "./components/pages/FriendProfile";
+import FriendsSubmissionsFull from "./components/pages/FriendsSubmissionsFull";
 function App() {
   
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path=  "/profile/:search" element={<FriendProfile />} />
           <Route path="/home" element={<Home_Page />}></Route>
           <Route path="/userSubmissions" element={<UserSubmission />}></Route>
+          <Route path="/friendSubmissions" element={<FriendsSubmissionsFull />} />
           <Route path="/upcomingContests" element={<Contests />} />
           <Route path="/mockInterview" element={<Mock_Interview />} />
         </Routes>

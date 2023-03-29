@@ -5,8 +5,9 @@ const initialState = {
   name: "",
   email: "",
   codeforces: "",
-  following: "",
-  isRetirieved: false,
+  atcoder: "",
+  following: [],
+  isRetrieved: false,
   isError: false,
   isLoading: false,
   message: "",
@@ -54,7 +55,7 @@ export const profileSlice = createSlice({
       state.name = "";
       state.email = "";
       state.following = "";
-      state.isRetirieved = false;
+      state.isRetrieved = false;
       state.isError = false;
       state.isLoading = false;
       state.message = "";
@@ -70,14 +71,14 @@ export const profileSlice = createSlice({
         state.name = action.payload.name;
         state.email = action.payload.email;
         state.codeforces = action.payload.codeforces;
-        state.isRetirieved = true;
+        state.atcoder = action.payload.atcoder;
+        state.isRetrieved = true;
         state.following = action.payload.following;
       })
       .addCase(getProfile.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
-        state.userProfile = null;
       })
       .addCase(friendProfile.pending, (state) => {
         state.isLoading = true;
@@ -87,14 +88,14 @@ export const profileSlice = createSlice({
         state.name = action.payload.name;
         state.email = action.payload.email;
         state.codeforces = action.payload.codeforces;
-        state.isRetirieved = true;
+        state.atcoder = action.payload.atcoder;
+        state.isRetrieved = true;
         state.following = action.payload.following;
       })
       .addCase(friendProfile.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
-        state.userProfile = null;
       });
   },
 });
