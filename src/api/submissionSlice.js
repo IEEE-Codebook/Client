@@ -3,6 +3,7 @@ import { SubmissionService } from "./submissionService";
 
 const initialState = {
   submissions: [],
+  atcoder_submission:[],
   isRetrieved: false,
   isError: false,
   isLoading: false,
@@ -32,6 +33,7 @@ export const submissionSlice = createSlice({
   reducers: {
     reset: (state) => {
       state.submissions = [];
+      state.atcoder_submission = [];
       state.isRetrieved = false;
       state.isError = false;
       state.isLoading = false;
@@ -46,6 +48,7 @@ export const submissionSlice = createSlice({
       .addCase(getSubmissions.fulfilled, (state, action) => {
         state.isLoading = false;
         state.submissions = action.payload.handles;
+        state.atcoder_submission = action.payload.atcoder;
         state.isRetrieved = true;
       })
       .addCase(getSubmissions.rejected, (state, action) => {
