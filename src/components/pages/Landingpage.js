@@ -50,12 +50,11 @@ const Landingpage = () => {
             <div className="box">
               <div className="content">
                 <h2>#2</h2>
-                <h3>Challenges and Quizzes</h3>
+                <h3>Friends' Recent Submissions</h3>
                 <p>
-                  Get to practice challenges and quizzes and get to know your
-                  rankings amongst your peers
+                  Get to know the recent submissions of all your friends
                 </p>
-                <a href="#0">Know More</a>
+                <a href="/login">Know More</a>
               </div>
             </div>
           </div>
