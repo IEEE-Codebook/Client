@@ -1,90 +1,3 @@
-/* .profilePage_html,
-.profilePage_body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-.profilePage_main {
-  background-color: white;
-  margin-top: 4.5em;
-}
-.profilePage_row {
-  height: 80em;
-  width: 100%;
-}
-
-.profilePage_col-md-3 {
-  height: 80em;
-  border-radius: 1em;
-  background-size: cover;
-}
-
-.profilePage_ratings {
-  background-color: whitesmoke;
-  border-radius: 2em;
-  padding: 1em;
-  height: 30em;
-  padding: 1em;
-  margin: 1em;
-}
-.profilePage_card {
-  height: 83em;
-}
-.profilePage_recent-submissions {
-  background-color: whitesmoke;
-  border-radius: 2em;
-  padding: 1em;
-  height: 20em;
-  padding: 1em;
-  margin: 1em;
-}
-.profilePage_connected-profiles {
-  background-color: rgb(255, 238, 52);
-  border-radius: 2em;
-  padding: 1em;
-  height: 20em;
-  margin: 1em;
-}
-.profilePage_mail-pref {
-  background-color: rgb(255, 238, 52);
-  border-radius: 2em;
-  padding: 1em;
-  height: 20em;
-  margin: 1em;
-}
-.profilePage_delete-account {
-  background-color: red;
-  text-align: center;
-  height: 6em;
-  padding-top: 0.8em;
-}
-.profilePage_recent-submissions {
-  height: 26em;
-  padding: 1em;
-}
-.profilePage_user-name,
-.profilePage_rank,
-.profilePage_points,
-.profilePage_badge,
-.profilePage_friends {
-  background-color: rgb(255, 238, 52);
-  height: 16em;
-  border-radius: 2em;
-  padding: 1em;
-}
-.profilePage_rounded-circle {
-  height: 20em;
-}
-.profilePage_badge {
-  height: 25em;
-  margin: 1em;
-}
-.profilePage_points {
-  margin-left: 1em;
-  margin-right: 1em;
-} */
-
 .wrapper {
   width: fit-content;
   height: 100vh;
@@ -339,4 +252,30 @@
   margin:10px auto;
   font-size: 1.2em;
   background-color: rgb(67, 128, 130);
+}
+
+.edit-form{
+  position: relative;
+  top: 3em;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.edit-input{
+  margin: 1em;
+}
+.editform-btn{
+  
+  font-size: 1.2em;
+  border-radius: 10%;
+  padding: 0.75em;
+  width: 25%;
+  margin: 2em auto;
+  color: #fff;
+  background-color:black;
+  border: 2px solid crimson;
+  font-family: "VT323", monospace;
+
 }

@@ -13,6 +13,7 @@ import UserSubmission from "./components/pages/userSubmissions";
 import MockInterview from "./components/pages/Mock_Interview";
 import FriendProfile from "./components/pages/FriendProfile";
 import FriendsSubmissionsFull from "./components/pages/FriendsSubmissionsFull";
+import EditProfile from "./components/pages/EditProfile";
 function App() {
   
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile/me" element={<ProfilePage />}></Route>
+          <Route path="/profile/edit" element={<EditProfile />} />
           <Route path=  "/profile/:search" element={<FriendProfile />} />
           <Route path="/home" element={<HomePage />}></Route>
           <Route path="/userSubmissions" element={<UserSubmission />}></Route>

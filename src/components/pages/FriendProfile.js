@@ -3,14 +3,16 @@ import "../../css/ProfilePage.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { friendProfile } from "../../api/profileSlice";
+import { useNavigate, useParams } from "react-router-dom";
+import { friendProfile, addFriend } from "../../api/profileSlice";
 import Spinner from "../Spinner";
 import Lottie from "lottie-react";
 import chill from "../../chill.json";
 const FriendProfile = () => {
   const { search } = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.auth);
   const {
     name,
     email,
@@ -21,7 +23,14 @@ const FriendProfile = () => {
     isLoading,
     message,
   } = useSelector((state) => state.profile);
-
+  const addNewFriend = async () => {
+    const token = user.token ? user.token : user;
+    if (!token) {
+      navigate("/login");
+    }
+    dispatch( addFriend([token, search]));
+    alert("Friend Added");
+  };
   useEffect(() => {
     if (isError) console.log(message);
     dispatch(friendProfile(search));
@@ -48,7 +57,10 @@ const FriendProfile = () => {
           <span class="handles">Codeforces - {codeforces}</span>
           <span class="handles">Atcoder - {atcoder}</span>
         </div>
-        <button className="pure-material-button-contained edit-btn">
+        <button
+          className="pure-material-button-contained edit-btn"
+          onClick={addNewFriend}
+        >
           Add Friend.
         </button>
       </div>

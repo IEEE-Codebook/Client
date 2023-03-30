@@ -79,6 +79,40 @@ export const addCodeforces = createAsyncThunk(
     }
   }
 );
+
+export const addFriend = createAsyncThunk(
+  "/profile/add",
+  async (params, thunkAPI) => {
+    try {
+      return ProfileService.addFriend(params);
+    } catch (error) {
+      const msg =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(msg);
+    }
+  }
+);
+
+export const editDetails = createAsyncThunk(
+  "/profile/edit",
+  async (params, thunkAPI) => {
+    try {
+      return ProfileService.editDetails(params);
+    } catch (error) {
+      const msg =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(msg);
+    }
+  }
+);
 export const profileSlice = createSlice({
   name: "profile",
   initialState,
@@ -86,7 +120,7 @@ export const profileSlice = createSlice({
     reset: (state) => {
       state.name = "";
       state.email = "";
-      state.following = "";
+      state.following = [];
       state.isRetrieved = false;
       state.isError = false;
       state.isLoading = false;
@@ -154,6 +188,35 @@ export const profileSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload.error;
+      })
+      .addCase(addFriend.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addFriend.fulfilled, (state, action) => {
+        state.following = action.payload.following;
+        state.isLoading = false;
+        state.isError = false;
+        state.isRetrieved = true;
+      })
+      .addCase(addFriend.rejected, (state, action) => {
+        state.isError = true;
+        state.isLoading = false;
+        state.message = action.payload;
+      })
+      .addCase(editDetails.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(editDetails.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      }).addCase(editDetails.fulfilled,(state,action) => {
+        state.isLoading = false;
+        state.isRetrieved = true;
+        state.name = action.payload.name;
+        state.email = action.payload.email;
+        state.codeforces = action.payload.codeforces;
+        state.atcoder = action.payload.atcoder;
       });
   },
 });

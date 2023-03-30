@@ -8,7 +8,7 @@ import { useState } from "react";
 import Spinner from "../Spinner";
 import Lottie from "lottie-react";
 import chill from "../../chill.json";
-import {TextField } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 
 const ProfilePage = () => {
   const [handle, setHandle] = useState("");
@@ -38,7 +38,9 @@ const ProfilePage = () => {
     dispatch(addCodeforces([token, handle]));
     setHandle("");
   };
-
+  const handleEdit = () => {
+    navigate("/profile/edit");
+  };
   useEffect(() => {
     if (isError) console.log(message);
     if (!user) navigate("/login");
@@ -98,7 +100,12 @@ const ProfilePage = () => {
             </div>
           )}
         </div>
-        <button className="pure-material-button-contained edit-btn" onClick={ navigate("/edit")}>Edit</button>
+        <button
+          className="pure-material-button-contained edit-btn"
+          onClick={handleEdit}
+        >
+          Edit
+        </button>
       </div>
     </div>
   );
