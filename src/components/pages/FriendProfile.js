@@ -1,25 +1,21 @@
 import React from "react";
 import "../../css/ProfilePage.css";
-import "../ToDoList.js";
-import TodoList from "../ToDoList.js";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { friendProfile } from "../../api/profileSlice";
-import { useState } from "react";
 import Spinner from "../Spinner";
-import Lottie from "lottie-react"
+import Lottie from "lottie-react";
 import chill from "../../chill.json";
 const FriendProfile = () => {
   const { search } = useParams();
-  const [image, setImage] = useState();
-  const [error, setError] = useState("");
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const {
     name,
     email,
     codeforces,
+    atcoder,
     following,
     isError,
     isLoading,
@@ -43,28 +39,18 @@ const FriendProfile = () => {
         <div class="profile_info">
           <div class="info">
             <p class="name">{name}</p>
-          
-            <Lottie animationData={chill} loop={true} />
+            <Lottie className="lottie" animationData={chill} loop={true} />
           </div>
         </div>
         <div class="profile_skills">
-          <div class="skills">
-            <p>Skills</p>
-            <ul>
-              <li>
-                <span class="title">Friends - {following.length}</span>
-              </li>
-              <li>
-                <span class="title">Mail - {email}</span>
-              </li>
-              <li>
-                <span class="handles">codeforces</span>
-                <br></br>
-                <span class="handles">atcoder</span>
-              </li>
-            </ul>
-          </div>
+          <span class="title">Friends - {following.length}</span>
+          <span class="title">Mail - {email}</span>
+          <span class="handles">Codeforces - {codeforces}</span>
+          <span class="handles">Atcoder - {atcoder}</span>
         </div>
+        <button className="pure-material-button-contained edit-btn">
+          Add Friend.
+        </button>
       </div>
     </div>
   );

@@ -58,7 +58,7 @@ function RealApiCall(props) {
             <tbody>
               {data.map((item) => {
                 const duration = (item.duration / 3600).toFixed(2);
-                const [date, time] = item.start_time.split("T");
+                const [date, ] = item.start_time.split("T");
                 const startTime = new Date(item.start_time);
                 const startTimeString = startTime.toLocaleString("en-US", {
                   hour: "numeric",
@@ -78,7 +78,7 @@ function RealApiCall(props) {
           </table>
         </>
       ) : (
-        <h1></h1>
+        <h1> No Contests</h1>
       )}
     </div>
   );

@@ -12,7 +12,6 @@ function FriendsSubmission() {
     submissions,
     isRetrieved,
     isLoading,
-    isError,
   } = useSelector((state) => state.submission);
   useEffect(() => {
     const token = user.token ? user.token : user;
@@ -20,18 +19,18 @@ function FriendsSubmission() {
   }, [user, dispatch, getSubmissions]);
 
   if (isRetrieved) {
-    if (submissions.length == 0 && atcoder_submission.length == 0) {
+    if (submissions.length === 0 && atcoder_submission.length === 0) {
       return <h1>No Friends Submissions</h1>;
     }
     let tableRows, atRows;
-    if (atcoder_submission.length != 0) {
+    if (atcoder_submission.length !== 0) {
       atRows = atcoder_submission[1].slice(0, 5).map((submission) => (
         <tr key={submission.id}>
           <td>
             <a
               href={`https://atcoder.jp/contests/${submission.contest_id}/tasks/${submission.problem_id}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {submission.problem_id}
             </a>
@@ -41,7 +40,7 @@ function FriendsSubmission() {
         </tr>
       ));
     }
-    if (submissions.length != 0) {
+    if (submissions.length !== 0) {
       tableRows = submissions[1].slice(0, 5).map((submission) => (
         <tr key={submission.id}>
           {/* <td>{new Date(submission.creationTimeSeconds * 1000).toLocaleString()}</td> */}
@@ -49,7 +48,7 @@ function FriendsSubmission() {
             <a
               href={`https://codeforces.com/problemset/problem/${submission.problem.contestId}/${submission.problem.index}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {submission.problem.name}
             </a>
@@ -76,7 +75,9 @@ function FriendsSubmission() {
               {/* <th>Memory</th> */}
             </tr>
           </thead>
-          <tbody>{tableRows} {atRows}</tbody>
+          <tbody>
+            {tableRows} {atRows}
+          </tbody>
         </table>
       </div>
     );

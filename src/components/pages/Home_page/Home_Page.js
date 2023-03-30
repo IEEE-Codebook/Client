@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../css/Home_Page.css";
-import Home_Page_Submissions from "./Home_Page_Submissions";
-import Home_Page_Contests from "./Home_Page_Contests";
+import HomePageSubmissions from "./Home_Page_Submissions";
+import HomePageContests from "./Home_Page_Contests";
 import FriendsSubmission from "./FriendsSubmission";
 function Home_Page() {
   return (
@@ -10,14 +10,14 @@ function Home_Page() {
       <div className="cbook_card-grid">
         <div className="cbook_card" id="c1">
           <h2 className="cbook_card-title">Upcoming Contests</h2>
-          <Home_Page_Contests />
+          <HomePageContests />
           <div className="cbook_card-content">
             <a href="/upcomingContests">Show More</a>
           </div>
         </div>
         <div className="cbook_card">
           <h2 className="cbook_card-title">Recent Submissions</h2>
-          <Home_Page_Submissions />
+          <HomePageSubmissions />
           <div className="cbook_card-content">
             <a href="/userSubmissions">Show More</a>
           </div>

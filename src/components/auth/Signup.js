@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import { signup, reset } from "../../api/authSlice";
+import { signup } from "../../api/authSlice";
 import "../../css/SignIn.css";
 import "../../images/code-bg.jpg";
 import Spinner from "../Spinner";

@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function Home_Page_Submissions() {
   const dispatch = useDispatch();
-  const { name, atcoder, codeforces, isLoading, isRetrieved } = useSelector(
+  const {  atcoder, codeforces, isLoading, isRetrieved } = useSelector(
     (state) => state.profile
   );
   const { user } = useSelector((state) => state.auth);
@@ -43,7 +43,7 @@ function Home_Page_Submissions() {
           <a
             href={`https://atcoder.jp/contests/${submission.contest_id}/tasks/${submission.problem_id}`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             {submission.problem_id}
           </a>
@@ -58,7 +58,7 @@ function Home_Page_Submissions() {
           <a
             href={`https://codeforces.com/problemset/problem/${submission.problem.contestId}/${submission.problem.index}`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             {submission.problem.name}
           </a>

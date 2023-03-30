@@ -1,7 +1,5 @@
 import React from "react";
 import "../../css/ProfilePage.css";
-import "../ToDoList.js";
-import TodoList from "../ToDoList.js";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,10 +8,9 @@ import { useState } from "react";
 import Spinner from "../Spinner";
 import Lottie from "lottie-react";
 import chill from "../../chill.json";
-import { Button, TextField } from "@material-ui/core";
+import {TextField } from "@material-ui/core";
 
 const ProfilePage = () => {
-  const [image, setImage] = useState();
   const [handle, setHandle] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -101,69 +98,9 @@ const ProfilePage = () => {
             </div>
           )}
         </div>
-        <button className="pure-material-button-contained edit-btn">Edit</button>
+        <button className="pure-material-button-contained edit-btn" onClick={ navigate("/edit")}>Edit</button>
       </div>
     </div>
-    // <div className="profilePage_main">
-    //   <div className="profilePage_row">
-    //     <div className="profilePage_col-md-4 mt-1">
-    //       <div className="profilePage_card text-center sidebar">
-    //         <div className="profilePage_card-body">
-    //           <img
-    //             className="profilePage_rounded-circle"
-    //             src="https://i.imgur.com/cMy8V5j.png"
-    //             alt="user"
-    //           />
-    //           <div className="profilePage_user-name-profile mt-3">
-    //             <div className="profilePage_user-name">
-    //               <h3>{name}</h3>
-    //             </div>
-    //             <div className="profilePage_friends mt-5">
-    //               <h3>{following.length}</h3>
-    //             </div>
-    //             <div className="profilePage_rank mt-5">
-    //               <h3>Rank</h3>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //     <div className="profilePage_col-md-4 mt-1">
-    //       <div className="profilePage_card text-left">
-    //         <div className="profilePage_recent-submissions">
-    //           <h4>recent subs</h4>
-    //         </div>
-    //         <div className="profilePage_points mt-5">
-    //           <h3>Points</h3>
-    //         </div>
-    //         <div className="profilePage_badge mt-5">
-    //           <h3>Badge</h3>
-    //         </div>
-    //       </div>
-    //     </div>
-    //     <div className="profilePage_col-md-4 mt-1">
-    //       <div className="profilePage_card text-left">
-    //         <div className="profilePage_ratings">
-    //           <h4>ratings</h4>
-    //         </div>
-    //         <div className="profilePage_connected-profiles mt-3">
-    //           <h4>{codeforces}</h4>
-    //         </div>
-    //         <div className="profilePage_mail-pref mt-3">
-    //           <h4>email = {email}</h4>
-    //         </div>
-    //         <div className="profilePage_delete-account mt-2">
-    //           <button className="profilePage_btn profilePage_btn-danger-outline">
-    //             Delete Account
-    //           </button>
-    //           <button className="profilePage_btn profilePage_btn-danger-outline">
-    //             Deactivate Account
-    //           </button>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router";
-import { login, reset } from "../../api/authSlice";
+import { login } from "../../api/authSlice";
 import Spinner from "../Spinner";
 import "../../css/Login.css";
 import { useEffect } from "react";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import "../../css/userSubmissions.css";
 import { useSelector } from "react-redux";
 import Spinner from "../Spinner";
@@ -26,11 +26,11 @@ function FriendsSubmissionsFull() {
   if (isError) return <h1>{message}</h1>;
 
   if (isRetrieved) {
-    if (submissions.length == 0 && atcoder_submission.length == 0) {
+    if (submissions.length === 0 && atcoder_submission.length === 0) {
       return <h1>No Friends Submissions</h1>;
     }
     let tableRows, atRows;
-    if (atcoder_submission.length != 0) {
+    if (atcoder_submission.length !== 0) {
       atRows = atcoder_submission[1].map((submission) => (
         <tr key={submission.id}>
           <td className="user-sub_td">{atcoder_submission[0]}</td>
@@ -41,7 +41,7 @@ function FriendsSubmissionsFull() {
             <a
               href={`https://atcoder.jp/contests/${submission.contest_id}/tasks/${submission.problem_id}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {submission.problem_id}
             </a>
@@ -53,7 +53,7 @@ function FriendsSubmissionsFull() {
         </tr>
       ));
     }
-    if (submissions.length != 0) {
+    if (submissions.length !== 0) {
       tableRows = submissions[1].map((submission) => (
         <tr key={submission.id}>
           <td>{submissions[0]}</td>
@@ -64,7 +64,7 @@ function FriendsSubmissionsFull() {
             <a
               href={`https://codeforces.com/problemset/problem/${submission.problem.contestId}/${submission.problem.index}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {submission.problem.name}
             </a>

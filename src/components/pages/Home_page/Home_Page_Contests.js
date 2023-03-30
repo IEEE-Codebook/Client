@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../../../css/Home_Page.css"
+import "../../../css/Home_Page.css";
 
 function Home_Page_Contests() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    let url="https://kontests.net/api/v1/codeforces";
-    
+    let url = "https://kontests.net/api/v1/codeforces";
+
     // switch (props.platformName) {
     //   case "codeforces":
     //     url = "https://kontests.net/api/v1/codeforces";
@@ -58,14 +58,14 @@ function Home_Page_Contests() {
             </thead>
             <tbody>
               {data.map((item) => {
-                const duration = (item.duration / 3600).toFixed(2);
-                const [date, time] = item.start_time.split("T");
-                const startTime = new Date(item.start_time);
-                const startTimeString = startTime.toLocaleString("en-US", {
-                  hour: "numeric",
-                  minute: "numeric",
-                  hour12: true,
-                });
+                // const duration = (item.duration / 3600).toFixed(2);
+                const [date, ] = item.start_time.split("T");
+                // const startTime = new Date(item.start_time);
+                // const startTimeString = startTime.toLocaleString("en-US", {
+                //   hour: "numeric",
+                //   minute: "numeric",
+                //   hour12: true,
+                // });
                 return (
                   <tr key={item.id}>
                     <td>{item.name}</td>
@@ -79,7 +79,7 @@ function Home_Page_Contests() {
           </table>
         </>
       ) : (
-        <h1></h1>
+        <h1>No Contest </h1>
       )}
     </div>
   );
