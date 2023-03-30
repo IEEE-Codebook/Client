@@ -41,23 +41,6 @@ export const logout = createAsyncThunk("auth/logout", async () => {
   await AuthService.logout();
 });
 
-export const getProfile = createAsyncThunk(
-  "/profile/me",
-  async (token, thunkAPI) => {
-    try {
-      return await AuthService.getProfile(token);
-    } catch (error) {
-      const msg =
-        (error.response &&
-          error.response.data &&
-          error.response.data.message) ||
-        error.message ||
-        error.toString();
-      return thunkAPI.rejectWithValue(msg);
-    }
-  }
-);
-
 export const authSlice = createSlice({
   name: "auth",
   initialState,

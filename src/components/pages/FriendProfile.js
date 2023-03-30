@@ -8,6 +8,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { friendProfile } from "../../api/profileSlice";
 import { useState } from "react";
 import Spinner from "../Spinner";
+import Lottie from "lottie-react"
+import chill from "../../chill.json";
 const FriendProfile = () => {
   const { search } = useParams();
   const [image, setImage] = useState();
@@ -41,8 +43,8 @@ const FriendProfile = () => {
         <div class="profile_info">
           <div class="info">
             <p class="name">{name}</p>
-            <p class="place">{codeforces}</p>
-            <img src={image} alt="image" className="profile_img"></img>
+          
+            <Lottie animationData={chill} loop={true} />
           </div>
         </div>
         <div class="profile_skills">

@@ -1,5 +1,5 @@
 import React from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import BeatLoader from "react-spinners/BeatLoader";
 
 function Spinner() {
   const override = {
@@ -9,15 +9,7 @@ function Spinner() {
   };
   return (
     <div className="sweet-loading">
-      <ClipLoader
-        cssOverride={override}
-        size={150}
-        color={"#123abc"}
-        loading="true"
-        speedMultiplier={1.5}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
+     <BeatLoader color="#36d7b7" />
     </div>
   );
 }

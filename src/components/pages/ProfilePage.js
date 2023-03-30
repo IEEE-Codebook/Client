@@ -1,72 +1,107 @@
 import React from "react";
-import axios from "axios";
 import "../../css/ProfilePage.css";
 import "../ToDoList.js";
 import TodoList from "../ToDoList.js";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { getProfile } from "../../api/profileSlice";
+import { getProfile, addAtcoder, addCodeforces } from "../../api/profileSlice";
 import { useState } from "react";
 import Spinner from "../Spinner";
+import Lottie from "lottie-react";
+import chill from "../../chill.json";
+import { Button, TextField } from "@material-ui/core";
+
 const ProfilePage = () => {
   const [image, setImage] = useState();
-  const [error, setError] = useState("");
+  const [handle, setHandle] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
-  const { name, email, codeforces, following, isError,isLoading, message } = useSelector(
-    (state) => state.profile
-  );
-  const handleUpload = async (e) => {
+  const {
+    name,
+    email,
+    codeforces,
+    atcoder,
+    following,
+    isError,
+    isLoading,
+    message,
+  } = useSelector((state) => state.profile);
+
+  const handleAddAtcoder = (e) => {
     e.preventDefault();
+    const token = user.token ? user.token : user;
+    dispatch(addAtcoder([token, handle]));
+    setHandle("");
   };
+  const handleAddCodeforces = (e) => {
+    e.preventDefault();
+    const token = user.token ? user.token : user;
+    dispatch(addCodeforces([token, handle]));
+    setHandle("");
+  };
+
   useEffect(() => {
     if (isError) console.log(message);
     if (!user) navigate("/login");
     dispatch(getProfile(user));
   }, [isError, message, user, navigate, dispatch]);
 
-  if(isLoading)
-  {
-    return <Spinner />
+  if (isLoading) {
+    return <Spinner />;
   }
+
   return (
     <div class="wrapper">
       <div class="profile">
         <div class="profile_info">
           <div class="info">
             <p class="name">{name}</p>
-            <p class="place">{codeforces}</p>
-            <img src={image} alt="image" className="profile_img"></img>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={(e) => {
-                setImage(URL.createObjectURL(e.target.files[0]));
-              }}
-            />
-            <button onClick={handleUpload}>upload new proile photo</button>
+            <Lottie className="lottie" animationData={chill} loop={true} />
           </div>
         </div>
         <div class="profile_skills">
-          <div class="skills">
-            <p>Skills</p>
-            <ul>
-              <li>
-                <span class="title">Friends - {following.length}</span>
-              </li>
-              <li>
-                <span class="title">Mail - {email}</span>
-              </li>
-              <li>
-                <span class="handles">codeforces</span>
-                <br></br>
-                <span class="handles">atcoder</span>
-              </li>
-            </ul>
-          </div>
+          <span class="title">Friends - {following.length}</span>
+          <span class="title">Mail - {email}</span>
+          {codeforces ? (
+            <span class="handles">Codeforces - {codeforces}</span>
+          ) : (
+            <div>
+              <TextField
+                value={handle}
+                label="Codeforces"
+                onChange={(e) => setHandle(e.target.value)}
+                required
+              />
+              <button
+                className="pure-material-button-contained"
+                onClick={handleAddCodeforces}
+              >
+                Link Codeforces
+              </button>
+            </div>
+          )}
+          {atcoder ? (
+            <span class="handles">Atcoder - {atcoder}</span>
+          ) : (
+            <div>
+              <TextField
+                value={handle}
+                label="Atcoder"
+                onChange={(e) => setHandle(e.target.value)}
+                required
+              />
+              <button
+                className="pure-material-button-contained"
+                onClick={handleAddAtcoder}
+              >
+                Link Atcoder
+              </button>
+            </div>
+          )}
         </div>
+        <button className="pure-material-button-contained edit-btn">Edit</button>
       </div>
     </div>
     // <div className="profilePage_main">
