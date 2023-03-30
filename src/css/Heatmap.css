@@ -1,0 +1,67 @@
+body {
+    font: 10px Tahoma;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .calender-map {
+    shape-rendering: crispEdges;
+  }
+  .day {
+    stroke: #666;
+  }
+  .month {
+    fill: none;
+    stroke: #000;
+    stroke-width: 2px;
+  }
+  .tooltip {
+    height: 18px;
+    padding: 3px;
+    width: 160px;
+    background-color: black;
+    display: none;
+    color:white;
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.8;
+    border-radius: 4px;
+    transition: all 0.6s ease;
+  }
+
+  #loading-gif {
+    display: none;
+    transition: all 1s ease;
+  }
+ 
+
+  #stats {
+    font-size: 10px;
+  }
+
+  form {
+    margin-bottom: 15px;
+  }
+
+  #username-input {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  label:hover, input[type=radio] {
+    cursor: pointer;
+  }
+
+  #line-year {
+    position: relative;
+    margin-left: 10px;
+  }

@@ -14,6 +14,7 @@ import Mock_Interview from "./components/pages/Mock_Interview";
 import { useState } from "react";
 import FriendProfile from "./components/pages/FriendProfile";
 import FriendsSubmissionsFull from "./components/pages/FriendsSubmissionsFull";
+import Heatmap from "./components/Heatmap";
 function App() {
   
   return (
