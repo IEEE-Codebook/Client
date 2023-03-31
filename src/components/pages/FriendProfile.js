@@ -8,6 +8,7 @@ import { friendProfile, addFriend } from "../../api/profileSlice";
 import Spinner from "../Spinner";
 import Lottie from "lottie-react";
 import chill from "../../chill.json";
+import Heatmap from "../Heatmap";
 const FriendProfile = () => {
   const { search } = useParams();
   const dispatch = useDispatch();
@@ -64,6 +65,7 @@ const FriendProfile = () => {
           Add Friend.
         </button>
       </div>
+      <Heatmap />
     </div>
   );
 };

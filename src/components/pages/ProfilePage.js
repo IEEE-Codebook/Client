@@ -9,6 +9,7 @@ import Spinner from "../Spinner";
 import Lottie from "lottie-react";
 import chill from "../../chill.json";
 import { TextField } from "@material-ui/core";
+import Heatmap from "../Heatmap"
 
 const ProfilePage = () => {
   const [handle, setHandle] = useState("");
@@ -107,6 +108,7 @@ const ProfilePage = () => {
           Edit
         </button>
       </div>
+      <Heatmap />
     </div>
   );
 };
