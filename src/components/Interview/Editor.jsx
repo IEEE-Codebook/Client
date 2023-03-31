@@ -383,9 +383,9 @@ const MyEditor = (props) => {
 				</nav>
 
 				<div className="d-flex">
-					<section className="mr-auto ml-1" style={{width:"50vw"}}>
+					<section className="mr-auto ml-1" style={{width:"150vw"}}>
 						<Editor
-							height="65vh"
+							height="60vh"
 							width="100%"
 							theme={theme}
 							language={language}

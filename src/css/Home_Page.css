@@ -135,3 +135,10 @@
     text-decoration: none;
     color: white;
 }
+
+form {
+    background: rgb(232, 223, 223);
+    color: rgb(10, 10, 10);
+    margin: 2.5em 0em;
+    display: inline;
+}

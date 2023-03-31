@@ -1,21 +1,21 @@
 .parent {
-    background: rgb(2, 2, 2);
-    max-height: 35vh;
-    overflow-y: hidden;
-  }
-  
-.child1 {
-    background: rgb(237, 237, 243);
-    width: 35%;
-    height: 22vh;
-    float: left;
-    margin: 0.025em 1em;
-  }
+  background: rgb(2, 2, 2);
+  max-height: 35vh;
+  overflow-y: hidden;
+}
 
-  .child2 {
-    background: rgb(237, 237, 243);
-    width: 22%;
-    height: 22vh;
-    float: left;
-    margin: 0.025em 1em;
-  }
+.child1 {
+  background: rgb(237, 237, 243);
+  width: 35%;
+  height: 22vh;
+  float: left;
+  margin: 0.025em 1em;
+}
+
+.child2 {
+  background: rgb(237, 237, 243);
+  width: 22%;
+  height: 22vh;
+  float: left;
+  margin: 0.025em 1em;
+}

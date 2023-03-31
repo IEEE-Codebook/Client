@@ -108,6 +108,9 @@ const ProfilePage = () => {
           Edit
         </button>
       </div>
+      <div id="right">
+        <Heatmap></Heatmap>
+      </div>
     </div>
   );
 };
