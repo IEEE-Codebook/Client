@@ -40,27 +40,30 @@ function FriendsSubmission() {
         </tr>
       ));
     }
-    if (submissions.length !== 0) {
-      tableRows = submissions[1].slice(0, 5).map((submission) => (
-        <tr key={submission.id}>
-          {/* <td>{new Date(submission.creationTimeSeconds * 1000).toLocaleString()}</td> */}
-          <td>
-            <a
-              href={`https://codeforces.com/problemset/problem/${submission.problem.contestId}/${submission.problem.index}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {submission.problem.name}
-            </a>
-          </td>
-          {/* <td>{submission.programmingLanguage}</td> */}
-          <td>{submission.verdict}</td>
-          <td>{submissions[0]}</td>
-          {/* <td>{submission.timeConsumedMillis} ms</td>
-          <td>{submission.memoryConsumedBytes / 1024} KB</td> */}
-        </tr>
-      ));
-    }
+    // if (submissions.length !== 0) {
+    //   const codeforces_submissions = submissions[1].map((codeforces_handles) => {
+        
+    //   })
+    //   tableRows = submissions[1].map((codeforces_handles) => (
+    //     <tr key={submission.id}>
+    //       {/* <td>{new Date(submission.creationTimeSeconds * 1000).toLocaleString()}</td> */}
+    //       <td>
+    //         <a
+    //           href={`https://codeforces.com/problemset/problem/${submission.problem.contestId}/${submission.problem.index}`}
+    //           target="_blank"
+    //           rel="noopener noreferrer"
+    //         >
+    //           {submission.problem.name}
+    //         </a>
+    //       </td>
+    //       {/* <td>{submission.programmingLanguage}</td> */}
+    //       <td>{submission.verdict}</td>
+    //       <td>{submissions[0]}</td>
+    //       {/* <td>{submission.timeConsumedMillis} ms</td>
+    //       <td>{submission.memoryConsumedBytes / 1024} KB</td> */}
+    //     </tr>
+    //   ));
+    // }
     return (
       <div className="table-container">
         <table className="table">
