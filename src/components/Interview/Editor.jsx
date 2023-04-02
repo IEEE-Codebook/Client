@@ -401,7 +401,6 @@ const MyEditor = (props) => {
 							{/* <Messages messages={messages} nameOfUser={props.nameOfUser}>
 							</Messages>
 							<Input message={message} setMessage={setMessage} sendMessage={sendMessage}></Input> */}
-							<Video id ={id}></Video>
 						</div>
 					</section>
 

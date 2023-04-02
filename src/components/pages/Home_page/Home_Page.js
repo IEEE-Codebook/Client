@@ -1,43 +1,41 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import "../../../css/Home_Page.css";
 import HomePageSubmissions from "./Home_Page_Submissions";
 import HomePageContests from "./Home_Page_Contests";
 import FriendsSubmission from "./FriendsSubmission";
-import { useDispatch, useSelector } from 'react-redux';
-import { getBoard } from '../../../api/leaderboardSlice';
-import { useNavigate} from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { getBoard } from "../../../api/leaderboardSlice";
+import { useNavigate } from "react-router-dom";
 
 function Home_Page() {
   const [platform, setPlatform] = useState("");
   const [display, setDisplay] = useState(false);
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const { board, isLoading, isError, message } = useSelector(
-        (state) => state.board
-    );
+  const { board, isLoaded ,isLoading, isError, message } = useSelector(
+    (state) => state.board
+  );
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        if(platform == "") {
-            alert('Enter Platform');
-        }
-        else{
-            e.preventDefault();
-            const pl = platform;
-            dispatch(getBoard(pl));
-            setDisplay(true);
-            setPlatform("");
-        }  
-    };
+  const handleSubmit = (e) => {
+    if (platform == "") {
+      alert("Enter Platform");
+    } else {
+      e.preventDefault();
+      const pl = platform;
+      dispatch(getBoard(pl));
+      setDisplay(true);
+      setPlatform("");
+    }
+  };
 
-    useEffect(() => {
-        
-        if(board && display){
-            navigate('/leadresults')
-        }      
-        setDisplay(false);
-    }, [display, board]);
+  useEffect(() => {
+    if (board && isLoaded) {
+      navigate("/leadresults");
+    }
+    setDisplay(false);
+  }, [display, board, setDisplay, navigate]);
 
   return (
     <div className="cbook_container cbook_dark-mode">
@@ -70,16 +68,30 @@ function Home_Page() {
             <p>Content for Leaderboard</p>
           </div> */}
           <form id="contact" action="" method="post" onSubmit={handleSubmit}>
-                    <h3>Get rank according to platform</h3>
-                    <h4>Enter Platform name</h4>
-                    <fieldset>
-                    <input placeholder="Platform" type="text" tabindex="1" required autofocus onChange={(e) => setPlatform(e.target.value)} />
-                    </fieldset>
-                    <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                    </fieldset>
-                    
-                </form>
+            <h3>Get rank according to platform</h3>
+            <h4>Enter Platform name</h4>
+            <fieldset>
+              <input
+                placeholder="Platform"
+                type="text"
+                tabindex="1"
+                value={platform}
+                required
+                autofocus
+                onChange={(e) => setPlatform(e.target.value)}
+              />
+            </fieldset>
+            <fieldset>
+              <button
+                name="submit"
+                type="submit"
+                id="contact-submit"
+                data-submit="...Sending"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>

@@ -88,51 +88,17 @@ const Signup = () => {
                 />
               </div>
               <div>
-                <br />
-                <h5>Enter your name:</h5>
-                <input
-                  type="text"
-                  placeholder="CodeForces handle"
-                  className="signIn_input"
-                  value={cf_handle}
-                  onChange={(e) => setCF_handle(e.target.value)}
-                />
-                <br />
-              </div>
-              <div>
-                <br />
-                <h5>Enter your email:</h5>
-                <input
-                  type="email"
-                  className="input"
-                  placeholder="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <br />
-              </div>
-              <div>
-                <br />
-                <h5>Choose a strong password:</h5>
-                <input
-                  type="password"
-                  className="input"
-                  placeholder="password"
-                  value={password}
-                  onChange={(e) => setPasword(e.target.value)}
-                />
                 <div>
-                  <br />
-                  <h5>Enter your Codeforces handle:</h5>
+                  <h5>Enter your CodeForces handle:</h5>
                   <input
                     type="text"
                     placeholder="CodeForces handle"
-                    className="input"
+                    className="signIn_input"
                     value={cf_handle}
                     onChange={(e) => setCF_handle(e.target.value)}
                   />
+                  <br />
                 </div>
-                <br />
 
                 <button
                   className="signIn_btn signIn_btn-outline-primary my-2 my-sm-0"

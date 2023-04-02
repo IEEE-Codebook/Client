@@ -53,3 +53,7 @@
   height: 25px;
   width: 25px;
 }
+
+.signIn_welcome h5 {
+  color: white;
+}

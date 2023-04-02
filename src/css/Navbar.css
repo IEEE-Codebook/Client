@@ -100,9 +100,9 @@
 .input-group {
   display: flex;
   align-items: center;
-  display: block;
   padding: 0px;
   width: fit-content;
+  flex-wrap: nowrap;
 }
 
 .input {
