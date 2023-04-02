@@ -67,7 +67,7 @@ function Home_Page() {
           {/* <div className="cbook_card-content">
             <p>Content for Leaderboard</p>
           </div> */}
-          <form id="contact" action="" method="post" onSubmit={handleSubmit}>
+          <form className="cbook_form" id="contact" action="" method="post" onSubmit={handleSubmit}>
             <h3>Get rank according to platform</h3>
             <h4>Enter Platform name</h4>
             <fieldset>

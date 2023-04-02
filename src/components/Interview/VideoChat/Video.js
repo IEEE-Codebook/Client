@@ -53,7 +53,7 @@ const Video = () => {
 
     return (
         <div className='room' >
-            <div ref={Meet} className='meet'></div>
+            <div ref={Meet} className='video_meet'></div>
         </div>
     )
 }

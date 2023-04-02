@@ -116,14 +116,14 @@ const Room = (props) => {
 			</div>
 
 			<div >
-				<div class="parent">
-					<div className="child1">
+				<div class="room_parent">
+					<div className="room_child1">
 						<InputBox feature="Input" theme={RoomTheme} setProperty={setInput} fontSize={RoomFontSize}/>
 					</div>
-					<div className="child1">
+					<div className="room_child1">
 						<Box feature={isError?"Error":"Output"} theme={RoomTheme} value={output} fontSize={RoomFontSize}/>
 					</div>
-					<div className="child2">
+					<div className="room_child2">
 						<Box feature="Stats" theme={RoomTheme} value={stats} fontSize={RoomFontSize}/>
 					</div>
 					

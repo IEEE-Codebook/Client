@@ -1,4 +1,4 @@
-.form {
+.chat_input_form {
   display: flex;
   border-top: 2px solid #bb5b5b;
   border-left: 2px solid #da8f8f;
@@ -7,7 +7,7 @@
   border-radius: 20px;
 }
 
-.input {
+.chat_input_input {
   border: none;
   border-radius: 20px;
   padding: 1%;
@@ -16,11 +16,11 @@
   font-size: 1.2em;
 }
 
-input:focus, textarea:focus, select:focus{
+.chat_input_input:focus, textarea:focus, select:focus{
   outline: none;
 }
 
-.sendButton {
+.chat_input_sendButton {
   color: rgb(132, 69, 69) !important;
   text-transform: uppercase;
   text-decoration: none;

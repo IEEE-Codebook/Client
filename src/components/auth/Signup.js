@@ -86,9 +86,11 @@ const Signup = () => {
                   value={password}
                   onChange={(e) => setPasword(e.target.value)}
                 />
+                 <br />
               </div>
-              <div>
+              
                 <div>
+                <br />
                   <h5>Enter your CodeForces handle:</h5>
                   <input
                     type="text"
@@ -97,16 +99,17 @@ const Signup = () => {
                     value={cf_handle}
                     onChange={(e) => setCF_handle(e.target.value)}
                   />
-                  <br />
+                  
                 </div>
-
-                <button
-                  className="signIn_btn signIn_btn-outline-primary my-2 my-sm-0"
+                <br />
+                {/* <button
+                  className="signIn_btn signIn_btn-outline-primary my-2 my-sm-0 btn_signIn"
                   type="submit"
                 >
                   Sign Up
-                </button>
-              </div>
+                </button> */}
+                <button class="signIn_blue ">Sign in</button>
+              
             </form>
             <div>
               <br />
