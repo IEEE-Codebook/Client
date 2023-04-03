@@ -1,3 +1,4 @@
+import { fontStyle } from "@mui/system";
 import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,7 +28,7 @@ const NavBar = () => {
             alt="Logo"
           />
         </a>
-        <a href="/">CODEBOOK</a>
+        <a className="navbar_cb"  href="/">CODEBOOK</a>
       </div>
       <div className="left-navbar">
         <div class="input-group">
@@ -53,8 +54,9 @@ const NavBar = () => {
           </div>
         ) : (
           <div className="nav-links">
-            <a href="/profile/me">profile</a>
-            <button onClick={handleLogout}> logout</button>
+            <a href="/mockInterview">Interview</a>
+            <a href="/profile/me">Profile</a>
+            <a href="#" className="logout_btn" onClick={handleLogout}> Logout</a>
           </div>
         )}
       </div>

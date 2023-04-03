@@ -1,14 +1,17 @@
+
+
+
 .cbook_container {
     max-width: 100%;
     max-height: 100%;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #fff;
-    color: #333;
+    background-color: #4d16ce;
+    
 }
 
 .cbook_dark-mode {
-    background-color: hsl(0, 0%, 20%);
+    background-color: hsl(246.46deg 69.55% 22.14%);
     color: #fff;
 }
 
@@ -26,7 +29,7 @@
 }
 .cbook_card {
     color: #f4efef;
-    background-color: rgb(61, 61, 61);
+    background-color: rgb(51 57 100);
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
