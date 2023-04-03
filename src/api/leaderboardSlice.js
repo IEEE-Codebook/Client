@@ -3,6 +3,7 @@ import { LeaderboardService } from "./leaderboardService";
 
 const initialState = {
   board: null,
+  isLoaded: false,
   isError: false,
   isLoading: false,
   message: "",
@@ -30,7 +31,7 @@ export const leaderSlice = createSlice({
   initialState,
   reducers: {
     reset: (state) => {
-      state.board = null;
+      state.isLoaded = false;
       state.isError = false;
       state.isLoading = false;
       state.message = "";
@@ -43,9 +44,11 @@ export const leaderSlice = createSlice({
       })
       .addCase(getBoard.fulfilled, (state, action) => {
         state.isLoading = false;
+        state.isLoaded = true;
         state.board = action.payload;
       })
       .addCase(getBoard.rejected, (state, action) => {
+        state.isLoaded = false;
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;

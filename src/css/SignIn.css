@@ -8,14 +8,14 @@
   background-image: url(../images/code-bg.jpg);
   background-size: cover;
   background-position: center;
-  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Courier New", Courier, monospace; */
   color: white;
 }
 .signIn_sub-signin {
   display: flex;
   justify-content: center;
   height: fit-content;
-  width: 35%;
+  width: 50%;
   padding-top: 5px;
   border-radius: 35px;
   background-color: rgb(28, 8, 82);
@@ -27,11 +27,29 @@
 
 .signIn_input {
   border-radius: 20px;
-  width: 100%;
+  /* width: 100%; */
   padding: 10px;
   border: 1px solid #999;
 }
+.signIn_blue {
+  border-radius: 20px;
+  color: white;
+  background: #4C8FFB;
+  border: 1px #3079ED solid;
+  box-shadow: inset 0 1px 0 #80B0FB;
+}
 
+.signIn_blue:hover {
+  border-radius: 20px;
+  border: 1px #2F5BB7 solid;
+  box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+  background: #3F83F1;
+}
+
+.signIn_blue:active {
+  border-radius: 20px;
+  box-shadow: inset 0 2px 5px #2370FE;   
+}
 .signIn_imgs {
   display: flex;
   text-align: center;
@@ -52,4 +70,10 @@
 .signIn_google-signin-image-btn {
   height: 25px;
   width: 25px;
+}
+.btn_signIn{
+  border-radius: 20px;
+}
+.signIn_welcome h5 {
+  color: white;
 }

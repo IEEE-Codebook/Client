@@ -68,7 +68,7 @@ const Landingpage = () => {
                   Work with others in real time to complete projects and learn
                   together
                 </p>
-                <a href="#0">Know More</a>
+                <a href="/signup">Know More</a>
               </div>
             </div>
           </div>

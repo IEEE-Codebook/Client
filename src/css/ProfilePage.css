@@ -1,20 +1,22 @@
-.wrapper {
+.profile_wrapper {
   width: fit-content;
-  min-height: 100vh;
-  max-height: 500vh;
   display: flex;
   position: relative;
-  
+  min-height: 90vh;
+  max-height: 500vh;
+  top: 2em;
+  padding: 2em;
 }
-.wrapper .profile {
+.profile_wrapper .profile {
   width: fit-content;
   margin-right: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: cornflowerblue;
+  padding: 1.2em;
 }
-.wrapper .profile .profile_info {
+.profile_wrapper .profile .profile_info {
   display: flex;
   padding: 1em;
   background: #fff;
@@ -23,21 +25,21 @@
   justify-content: center;
   background-color: rgb(145, 183, 255);
 }
-.wrapper .profile .profile_info .img {
+.profile_wrapper .profile .profile_info .img {
   width: 125px;
 }
 
-.wrapper .profile .profile_info .img img {
+.profile_wrapper .profile .profile_info .img img {
   width: 100%;
   display: block;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.wrapper .profile .profile_info .info {
+.profile_wrapper .profile .profile_info .info {
   width: fit-content;
 }
 
-.wrapper .profile .profile_info .info .name {
+.profile_wrapper .profile .profile_info .info .name {
   font-size: 1.5em;
   font-weight: 700;
   color: black;
@@ -48,46 +50,45 @@
   margin: auto;
   color: black;
 }
-.wrapper .profile .profile_info .place {
+.profile_wrapper .profile .profile_info .place {
   font-weight: 300;
 }
-.wrapper .profile .profile_skills {
+.profile_wrapper .profile .profile_skills {
   background: #fff;
   border-radius: 10px;
-  padding: 25px;
+  padding: 1.2em;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   background-color: rgb(145, 183, 255);
   font-family: "VT323", monospace;
   font-size: 1.5em;
 }
 
-.wrapper .profile .profile_skills .skills {
+.profile_wrapper .profile .profile_skills .skills {
   padding-bottom: 20px;
   border-bottom: 1px solid #cccccc;
 }
 
-.wrapper .profile .profile_skills .skills p {
+.profile_wrapper .profile .profile_skills .skills p {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 0.001em;
 }
 
-.wrapper .profile .profile_skills .skills ul li {
+.profile_wrapper .profile .profile_skills .skills ul li {
   font-size: 30px;
   margin-bottom: 5px;
 }
 
-.wrapper .profile .profile_skills .skills ul li .fab {
+.profile_wrapper .profile .profile_skills .skills ul li .fab {
   width: 40px;
 }
-.wrapper .profile .profile_skills .tags_wrap {
+.profile_wrapper .profile .profile_skills .tags_wrap {
   padding-top: 20px;
 }
 
-.wrapper .profile .profile_skills .tags_wrap span.tag {
+.profile_wrapper .profile .profile_skills .tags_wrap span.tag {
   background: #e4e9ef;
   padding: 10px 15px;
   display: inline-block;
@@ -96,41 +97,41 @@
   font-size: 14px;
 }
 
-.wrapper .profile_counts {
+.profile_wrapper .profile_counts {
   background: #fff;
   border-radius: 10px;
   padding: 25px;
   width: 175px;
 }
 
-.wrapper .profile_counts .profile_counts_wrap {
+.profile_wrapper .profile_counts .profile_counts_wrap {
   padding: 30px 0;
   border-bottom: 1px solid #cccccc;
 }
-.wrapper .profile_counts .profile_counts_wrap:first-child {
+.profile_wrapper .profile_counts .profile_counts_wrap:first-child {
   padding-top: 0;
 }
-.wrapper .profile_counts .profile_counts_wrap:last-child {
+.profile_wrapper .profile_counts .profile_counts_wrap:last-child {
   padding-bottom: 0px;
   border-bottom: 0px;
 }
 
-.wrapper .profile_counts .profile_counts_wrap .item {
+.profile_wrapper .profile_counts .profile_counts_wrap .item {
   padding: 20px 10px;
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.wrapper .profile_counts .profile_counts_wrap .item:hover {
+.profile_wrapper .profile_counts .profile_counts_wrap .item:hover {
   background: #e4e9ef;
 }
 
-.wrapper .profile_counts .profile_counts_wrap .item .fas {
+.profile_wrapper .profile_counts .profile_counts_wrap .item .fas {
   font-size: 30px;
   margin-bottom: 20px;
 }
-.wrapper .profile_counts .profile_counts_wrap .item .title {
+.profile_wrapper .profile_counts .profile_counts_wrap .item .title {
   font-size: 14px;
 }
 
@@ -141,9 +142,18 @@
   padding: 1em;
 }
 
-.lottie {
+.profile_lottie {
   width: 15em;
   height: 15em;
+}
+
+.editform-btn {
+  padding: 1em;
+  width: 25%;
+  margin: 3em auto;
+  font-size: 1.5em;
+  border-radius: 10%;
+  font-family: "VT323", monospace;  
 }
 
 .pure-material-button-contained {
@@ -250,13 +260,20 @@
   opacity: 0;
 }
 
-.edit-btn{
-  margin:0.001em auto;
+.edit-btn {
+  margin: 0.001em auto;
   font-size: 1.2em;
   background-color: rgb(67, 128, 130);
 }
 
 #right {
   margin-top: 20px;
-  width : 950px;
+  width: 950px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
 }

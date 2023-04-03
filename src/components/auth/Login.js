@@ -74,12 +74,13 @@ function Login() {
               </div>
               <div className="login_login-button">
                 <br />
-                <button
+                {/* <button
                   className="login_btn login_btn-outline-primary my-2 my-sm-0"
                   type="submit"
                 >
                   Login
-                </button>
+                </button> */}
+                <button class="login_blue ">Login</button>
                 <br />
                 <br />
               </div>
