@@ -180,7 +180,7 @@ export const profileSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(addCodeforces.fulfilled, (state, action) => {
-        state.atcoder = action.payload.codeforces;
+        state.codeforces = action.payload.codeforces;
         state.isLoading = false;
         state.isRetrieved = true;
       })

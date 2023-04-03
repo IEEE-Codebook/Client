@@ -12,7 +12,8 @@ import { TextField } from "@material-ui/core";
 import Heatmap from "../Heatmap"
 
 const ProfilePage = () => {
-  const [handle, setHandle] = useState("");
+  const [handle_atcoder, setHandle_Atcoder] = useState("");
+  const [handle_codeforces,setHandle_Codeforces] = useState("")
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
@@ -30,14 +31,14 @@ const ProfilePage = () => {
   const handleAddAtcoder = (e) => {
     e.preventDefault();
     const token = user.token ? user.token : user;
-    dispatch(addAtcoder([token, handle]));
-    setHandle("");
+    dispatch(addAtcoder([token, handle_atcoder]));
+    setHandle_Atcoder("");
   };
   const handleAddCodeforces = (e) => {
     e.preventDefault();
     const token = user.token ? user.token : user;
-    dispatch(addCodeforces([token, handle]));
-    setHandle("");
+    dispatch(addCodeforces([token, handle_codeforces]));
+    setHandle_Codeforces("");
   };
   const handleEdit = () => {
     navigate("/profile/edit");
@@ -69,9 +70,9 @@ const ProfilePage = () => {
           ) : (
             <div>
               <TextField
-                value={handle}
+                value={handle_codeforces}
                 label="Codeforces"
-                onChange={(e) => setHandle(e.target.value)}
+                onChange={(e) => setHandle_Codeforces(e.target.value)}
                 required
               />
               <button
@@ -87,9 +88,9 @@ const ProfilePage = () => {
           ) : (
             <div>
               <TextField
-                value={handle}
+                value={handle_atcoder}
                 label="Atcoder"
-                onChange={(e) => setHandle(e.target.value)}
+                onChange={(e) => setHandle_Atcoder(e.target.value)}
                 required
               />
               <button
