@@ -5,8 +5,7 @@ import { TextField } from "@material-ui/core";
 import { useEffect } from "react";
 import { getProfile, editDetails } from "../../api/profileSlice";
 import { useNavigate } from "react-router";
-import "../../css/ProfilePage.css"
-
+import "../../css/ProfilePage.css";
 
 function EditProfile() {
   const dispatch = useDispatch();
@@ -36,6 +35,7 @@ function EditProfile() {
       atcoder: userAtcoder,
     };
     dispatch(editDetails(detail));
+    navigate("/profile/me");
   };
   return (
     <div>

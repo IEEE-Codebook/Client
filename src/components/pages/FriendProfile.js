@@ -64,12 +64,12 @@ const FriendProfile = () => {
         >
           Add Friend.
         </button>
-        </div>
-        <div id="right">
-            {codeforces ?  <Heatmap></Heatmap> : <div/>}
-            <TodoList />
-        </div>
-     
+
+      </div>
+      <div id="right">
+        {codeforces?<Heatmap></Heatmap>:<div/>}
+      </div>
+
     </div>
   );
 };
