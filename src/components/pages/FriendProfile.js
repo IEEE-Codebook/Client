@@ -65,7 +65,9 @@ const FriendProfile = () => {
           Add Friend.
         </button>
       </div>
-      <Heatmap />
+      <div id="right">
+        {codeforces?<Heatmap></Heatmap>:<div/>}
+      </div>
     </div>
   );
 };

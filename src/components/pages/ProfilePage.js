@@ -109,7 +109,7 @@ const ProfilePage = () => {
         </button>
       </div>
       <div id="right">
-        <Heatmap></Heatmap>
+        {codeforces?<Heatmap></Heatmap>:<div/>}
       </div>
     </div>
   );
