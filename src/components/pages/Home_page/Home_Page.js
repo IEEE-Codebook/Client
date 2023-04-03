@@ -36,7 +36,6 @@ function Home_Page() {
     }
     setDisplay(false);
   }, [display, board, setDisplay, navigate]);
-
   return (
     <div className="cbook_container cbook_dark-mode">
       <h1 className="cbook_title">Home Page</h1>
