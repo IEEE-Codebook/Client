@@ -64,33 +64,33 @@ function Home_Page() {
         </div>
         <div className="cbook_card">
           <h2 className="cbook_card-title">Leaderboard</h2>
-          {/* <div className="cbook_card-content">
-            <p>Content for Leaderboard</p>
-          </div> */}
+          
           <form className="cbook_form" id="contact" action="" method="post" onSubmit={handleSubmit}>
-            <h3>Get rank according to platform</h3>
-            <h4>Enter Platform name</h4>
-            <fieldset>
-              <input
-                placeholder="Platform"
-                type="text"
-                tabindex="1"
-                value={platform}
-                required
-                autofocus
-                onChange={(e) => setPlatform(e.target.value)}
-              />
-            </fieldset>
-            <fieldset>
-              <button
-                name="submit"
+            
+             <div>
+                
+                
+                <h4>Enter Platform name</h4>
+                <input
+                  className="cbook_input"
+                  type="text"
+                  tabIndex="1"
+                  placeholder="Platform name"
+                  value={platform}
+                  required
+                  autofocus
+                  onChange={(e) => setPlatform(e.target.value)}
+                />
+              </div>
+              <div className="login_login-button">
+                <br />
+                <button name="submit"
                 type="submit"
                 id="contact-submit"
-                data-submit="...Sending"
-              >
-                Submit
-              </button>
-            </fieldset>
+                data-submit="...Sending" class="cbook_blue ">Submit</button>
+                <br />
+                <br />
+              </div>
           </form>
         </div>
       </div>
