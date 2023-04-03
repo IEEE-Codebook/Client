@@ -17,13 +17,13 @@ const Results = () => {
     board.sortedLeaderboard.length - 2
   );
 
-  let rank = 1;
+  let rank = 1; 
 
   return (
     <div className="user-sub_table-container">
       {b.length > 0 ? (
         <>
-          <table className="table">
+          <table >
             <thead>
               <tr>
                 <th>Local Rank </th>
@@ -35,9 +35,9 @@ const Results = () => {
               {b.map((item) => {
                 return (
                   <tr>
-                    <td>{rank++}</td>
-                    <td>{item.username}</td>
-                    <td>{item.score}</td>
+                    <td className="user-sub_td">{rank++}</td>
+                    <td className="user-sub_td">{item.username}</td>
+                    <td className="user-sub_td">{item.score}</td>
                   </tr>
                 );
               })}

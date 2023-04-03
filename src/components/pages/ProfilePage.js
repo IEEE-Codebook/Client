@@ -53,12 +53,12 @@ const ProfilePage = () => {
   }
 
   return (
-    <div class="wrapper">
+    <div class="profile_wrapper">
       <div class="profile">
         <div class="profile_info">
           <div class="info">
             <p class="name">{name}</p>
-            <Lottie className="lottie" animationData={chill} loop={true} />
+            <Lottie className="profile_lottie" animationData={chill} loop={true} />
           </div>
         </div>
         <div class="profile_skills">

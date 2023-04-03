@@ -1,11 +1,11 @@
-body {
+/* body {
   font: 10px Tahoma;
   text-align: center;
-}
+} */
 
-h2 {
+/* h2 {
   font-size: 30px;
-}
+} */
 
 .calender-map {
   shape-rendering: crispEdges;
@@ -43,7 +43,7 @@ h2 {
   font-size: 30px;
 }
 
-form {
+.hm_form {
   margin-bottom: 15px;
 }
 
@@ -53,11 +53,11 @@ form {
   margin-bottom: 10px;
 }
 
-label {
+.hm_label {
   font-size: 12px;
 }
 
-label:hover, input[type=radio] {
+.hmlabel:hover, .hm_input[type=radio] {
   cursor: pointer;
 }
 

@@ -30,11 +30,78 @@
   font-size: 1.2rem;
 }
 
+
+
+
+.nav-links a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-links a::before,
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.nav-links a::before {
+  background-color: #54b3d6;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.nav-links a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #54b3d6;
+}
+
+.nav-links a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.nav-links a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.nav-links a span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.nav-links a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+/* Presentational Styles */
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #18272F;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+
+
+
 .logo-text a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: rgb(249, 248, 248);
   margin-left: 0.5rem;
 }
 
@@ -48,7 +115,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: right;
-  color: white;
+  color: rgb(17, 1, 1);
+  position: relative;
+  top: 6px;
+
 }
 
 .nav-links a {
@@ -59,6 +129,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
   .logo-text {
     font-size: 1rem;
   }
@@ -81,7 +152,7 @@
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-
+  
   .nav-links.active a {
     margin: 0.5rem 1rem;
   }
@@ -109,9 +180,9 @@
   min-height: 37.5px;
   max-width: 150px;
   padding: 0 1rem;
-  color: #fff;
+  color: #fefefe;
   font-size: 15px;
-  border: 1px solid #5e4dcd;
+  border: 1px solid #f5f4f9;
   border-radius: 6px 0 0 6px;
   background-color: transparent;
 }
@@ -121,15 +192,15 @@
   padding: 0.5em 1em;
   border: none;
   border-radius: 0 6px 6px 0;
-  background-color: #5e4dcd;
-  color: #fff;
+  background-color: #f3f2f7;
+  color: #0b0a0a;
   font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
 .button--submit:hover {
-  background-color: #5e5dcd;
+  background-color: #3898ec;
 }
 
 .input:focus,
@@ -140,4 +211,8 @@
 
 .left-navbar{
   display: flex;
+}
+
+.logout_btn{
+  color: #f3f2f7;
 }
