@@ -2,7 +2,7 @@
   background-image: url(../images/code-bg.jpg);
   background-size: cover;
   background-position: center;
-  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Courier New", Courier, monospace; */
 }
 
 .login_LoginPage {
@@ -12,17 +12,42 @@
   padding: 90px 0 90px 0;
   color: white;
 }
+.login_input {
+  border-radius: 20px;
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #999;
+}
 .login_sub-login {
   display: flex;
   justify-content: center;
   height: 675px;
-  width: 35%;
+  width: 50%;
 
   padding-top: 10px;
   border-radius: 35px;
   background-color: rgb(28, 8, 82);
 }
 
+.login_blue {
+  border-radius: 20px;
+  color: white;
+  background: #4C8FFB;
+  border: 1px #3079ED solid;
+  box-shadow: inset 0 1px 0 #80B0FB;
+}
+
+.login_blue:hover {
+  border-radius: 20px;
+  border: 1px #2F5BB7 solid;
+  box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+  background: #3F83F1;
+}
+
+.login_blue:active {
+  border-radius: 20px;
+  box-shadow: inset 0 2px 5px #2370FE;   
+}
 .login_imgs {
   display: flex;
   text-align: center;

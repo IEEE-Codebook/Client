@@ -355,14 +355,14 @@ const Heatmap = () => {
 
     return (
         <div>
-                <form role="form" id="hide">
+                <form className='hm_form' role="form" id="hide">
                     <input 
                     type="text" 
                     placeholder="Type existing codeforces handle" />
-                    <label><input type="radio" className="participantTypeRadio" name="participantType" value="A" checked />All</label>
-                    <label><input type="radio" className="participantTypeRadio" name="participantType" value="C" />Contest</label>
-                    <label><input type="radio" className="participantTypeRadio" name="participantType" value="P" />Practice</label>
-                    <label><input type="radio" className="participantTypeRadio" name="participantType" value="V" />Virtual</label>
+                    <label className='hm_label'><input type="radio" className="participantTypeRadio hm_input" name="participantType" value="A" checked />All</label>
+                    <label className='hm_label'><input type="radio" className="participantTypeRadio hm_input" name="participantType" value="C" />Contest</label>
+                    <label className='hm_label'><input type="radio" className="participantTypeRadio hm_input" name="participantType" value="P" />Practice</label>
+                    <label className='hm_label'><input type="radio" className="participantTypeRadio hm_input" name="participantType" value="V" />Virtual</label>
                     <select name="line-year" id="line-year"></select>
                     <button type="submit" >Submit</button>
                 </form>
