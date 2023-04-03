@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "../css/Todolist.css"
 function TodoList() {
   const [todoItems, setTodoItems] = useState([]);
   const [dropdownValue, setDropdownValue] = useState("");
@@ -33,7 +33,7 @@ function TodoList() {
   };
 
   return (
-    <div>
+    <div className="todo-container">
       <h2>Todo List</h2>
       <div>
         <select value={dropdownValue} onChange={handleDropdownChange}>
@@ -44,7 +44,12 @@ function TodoList() {
             </option>
           ))}
         </select>
-        <button onClick={handleAddTodo}>Add Todo</button>
+        <button
+          className="pure-material-button-contained edit-btn"
+          onClick={handleAddTodo}
+        >
+          Add Todo
+        </button>
       </div>
       <ul>
         {todoItems.map((item, index) => (

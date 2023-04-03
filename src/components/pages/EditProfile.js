@@ -13,7 +13,7 @@ function EditProfile() {
   const { user } = useSelector((state) => state.auth);
   const { name, email, codeforces, atcoder, isError, message } = useSelector(
     (state) => state.profile
-  );
+  ); 
 
   useEffect(() => {
     if (isError) console.log(message);

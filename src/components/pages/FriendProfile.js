@@ -1,6 +1,6 @@
 import React from "react";
 import "../../css/ProfilePage.css";
-
+import TodoList from "../ToDoList";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -17,7 +17,7 @@ const FriendProfile = () => {
   const {
     name,
     email,
-    codeforces,
+    codeforces, 
     atcoder,
     following,
     isError,
@@ -44,12 +44,12 @@ const FriendProfile = () => {
     return <h1>No User Found</h1>;
   }
   return (
-    <div class="wrapper">
+    <div class="profile_wrapper">
       <div class="profile">
         <div class="profile_info">
           <div class="info">
             <p class="name">{name}</p>
-            <Lottie className="lottie" animationData={chill} loop={true} />
+            <Lottie className="profile_lottie" animationData={chill} loop={true} />
           </div>
         </div>
         <div class="profile_skills">
@@ -64,10 +64,12 @@ const FriendProfile = () => {
         >
           Add Friend.
         </button>
+
       </div>
       <div id="right">
         {codeforces?<Heatmap></Heatmap>:<div/>}
       </div>
+
     </div>
   );
 };
