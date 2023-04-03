@@ -53,8 +53,8 @@ const NavBar = () => {
           </div>
         ) : (
           <div className="nav-links">
-            <a href="/profile/me">profile</a>
-            <button onClick={handleLogout}> logout</button>
+            <a href="/profile/me">Profile</a>
+            <a href="#" className="logout_btn" onClick={handleLogout}> Logout</a>
           </div>
         )}
       </div>
