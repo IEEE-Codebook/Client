@@ -60,7 +60,7 @@ const Interview_Home = (props) => {
             <header>
                 <div className="container">
                 <div className="banner-text">
-                    <h2>Hey {user.name}!! 
+                    <h2>Hey !! 
                         <Typewriter
                             onInit={(typewriter)=>{
                                 typewriter

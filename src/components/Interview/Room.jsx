@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MyEditor from './Editor';
 import Box from './EditorBox';
 import axios from "axios";
 import InputBox from './EditorInputBox';
 import { useSnackbar } from 'notistack';
 import { socket} from "../../socket";
-import "../../css/Room.css"
+import "../../css/Room.css";
+import { useSelector, useDispatch} from 'react-redux';
+
+import { getProfile } from "../../api/profileSlice";
 
 import 'react-reflex/styles.css'
 
@@ -14,6 +17,20 @@ import { useParams } from 'react-router';
 
 const Room = (props) => {
 	const {roomID} = useParams();
+
+	const dispatch = useDispatch();
+
+	const { user } = useSelector(
+        (state) => state.auth
+    );
+
+    useEffect(() => {
+        dispatch(getProfile(user));
+    }, [user, dispatch])
+
+    const {name} = useSelector(
+        (state) => state.profile
+    )
 	const getLanguageVersion = {
 		cpp17: "0", // g++ 17 GCC 9.10
 		java: "3", // JDK 11.0.4
@@ -104,7 +121,7 @@ const Room = (props) => {
 			<div style={{width:"100%", height:"77vh"}}>
 				<MyEditor
 					socket={socket}
-					nameOfUser={props.nameOfUser}
+					name={name}
 					setIsDisconnected={props.setIsDisconnected}
 					setRoomTheme={setRoomTheme}
 					setRoomFontSize={setRoomFontSize}
