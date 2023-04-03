@@ -27,7 +27,6 @@ function Home_Page() {
             const pl = platform;
             dispatch(getBoard(pl));
             setDisplay(true);
-            setPlatform("");
         }  
     };
 
@@ -37,7 +36,7 @@ function Home_Page() {
             navigate('/leadresults')
         }      
         setDisplay(false);
-    }, [display, board]);
+    }, [display, board, setDisplay, navigate]);
 
   return (
     <div className="cbook_container cbook_dark-mode">

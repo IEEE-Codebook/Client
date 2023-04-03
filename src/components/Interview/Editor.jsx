@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { socket} from "../../socket";
-import { useSelector} from 'react-redux';
+import { useSelector, useDispatch} from 'react-redux';
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 import PublishRoundedIcon from '@material-ui/icons/PublishRounded';
 import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
@@ -17,9 +17,11 @@ import { useSnackbar } from 'notistack';
 import { useNavigate } from 'react-router';
 import { NavLink} from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Messages from "./Chat/Messages";
-import Input from "./Chat/Input"
+
 import Video from './VideoChat/Video';
+
+
+
 
 
 const MyEditor = (props) => {
@@ -42,12 +44,15 @@ const MyEditor = (props) => {
     const { enqueueSnackbar, closeSnackbar } = useSnackbar();
     const history = useNavigate();
 
-	const { user, isLoading, isError, isSuccess, Message } = useSelector(
+	const { user } = useSelector(
         (state) => state.auth
     );
 
+
     let { id } = useParams();
 	console.log("Editor id", id);
+
+	
 
     useEffect(() => {
 		if (socket===undefined) {
@@ -383,7 +388,7 @@ const MyEditor = (props) => {
 				</nav>
 
 				<div className="d-flex">
-					<section className="mr-auto ml-1" style={{width:"150vw"}}>
+					<section className="mr-auto ml-1" style={{width:"100vw"}}>
 						<Editor
 							height="60vh"
 							width="100%"
@@ -397,16 +402,18 @@ const MyEditor = (props) => {
 						/>
 					</section>
 					<section className="ml-auto mr-1 d-flex" style={{width:"50vw"}}>
-						<div className="mr-auto d-flex flex-column border border-warning" style={{ minWidth: "60vh", width:"100%", height: "65vh", backgroundColor: "grey", }}>
+						<div className="mr-auto d-flex flex-column border border-warning" style={{ minWidth: "60vh", width:"100%", height: "60vh", backgroundColor: "grey", }}>
 							{/* <Messages messages={messages} nameOfUser={props.nameOfUser}>
 							</Messages>
 							<Input message={message} setMessage={setMessage} sendMessage={sendMessage}></Input> */}
-							<Video id ={id}></Video>
+							{/* <VideoChat roomId={id} userId={user} ></VideoChat> */}
+							<Video id={id} user={user} name={props.name}></Video>
 						</div>
 					</section>
 
 
 				</div>
+				
 			</div>
     )
 }
