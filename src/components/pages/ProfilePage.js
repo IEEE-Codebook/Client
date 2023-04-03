@@ -10,7 +10,7 @@ import Lottie from "lottie-react";
 import chill from "../../chill.json";
 import { TextField } from "@material-ui/core";
 import Heatmap from "../Heatmap"
-
+import TodoList from "../ToDoList";
 const ProfilePage = () => {
   const [handle, setHandle] = useState("");
   const dispatch = useDispatch();
@@ -109,7 +109,10 @@ const ProfilePage = () => {
         </button>
       </div>
       <div id="right">
-        <Heatmap></Heatmap>
+            {codeforces ?  <Heatmap></Heatmap> : <div/>}
+            <h1> </h1>
+            <h1> </h1>
+            <TodoList />
       </div>
     </div>
   );

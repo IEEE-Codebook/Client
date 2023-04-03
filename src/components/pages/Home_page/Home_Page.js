@@ -18,28 +18,30 @@ function Home_Page() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    if (platform == "") {
-      alert("Enter Platform");
-    } else {
-      e.preventDefault();
-      const pl = platform;
-      dispatch(getBoard(pl));
-      setDisplay(true);
-      setPlatform("");
-    }
-  };
+    const handleSubmit = (e) => {
+        if(platform == "") {
+            alert('Enter Platform');
+        }
+        else{
+            e.preventDefault();
+            const pl = platform;
+            dispatch(getBoard(pl));
+            setDisplay(true);
+            setPlatform("");
+        }  
+    };
 
-  useEffect(() => {
-    if (board && isLoaded) {
-      navigate("/leadresults");
-    }
-    setDisplay(false);
-  }, [display, board, setDisplay, navigate]);
+    useEffect(() => {
+        
+        if(board && display){
+            navigate('/leadresults')
+        }      
+        setDisplay(false);
+    }, [display, board]);
 
   return (
     <div className="cbook_container cbook_dark-mode">
-      <h1 className="cbook_title">Home Page</h1>
+      <h1 className="cbook_title">Welcome</h1>
       <div className="cbook_card-grid">
         <div className="cbook_card" id="c1">
           <h2 className="cbook_card-title">Upcoming Contests</h2>

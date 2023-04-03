@@ -1,0 +1,68 @@
+.todo-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .todo-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  
+  .todo-container select {
+    font-size: 16px;
+    padding: 5px;
+    width: 50%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .todo-container button {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .todo-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .todo-container li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .todo-container a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .todo-container button.delete-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .todo-container button.delete-btn:hover {
+    background-color: #c82333;
+  }
+  

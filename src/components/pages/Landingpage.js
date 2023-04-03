@@ -87,8 +87,8 @@ const Landingpage = () => {
           <h3>CODEBOOK</h3>
 
           <div className="footer-links">
-            <a href="#0">Home</a> · <a href="#0">Blog</a> ·{" "}
-            <a href="#0">About</a> ·<a href="#0">Faq</a> ·{" "}
+            <a href="/home">Home</a> · <a href="/mockInterview">Interview</a> ·{" "}
+            <a href="/profile/me"></a> ·<a href="/">Faq</a> ·{" "}
             <a href="#0">Contact</a>
           </div>
 
@@ -120,7 +120,7 @@ const Landingpage = () => {
         <div className="footer-right">
           <p>Contact Us</p>
 
-          <form action="#" method="post">
+          <form  onSubmit={ (e) => {e.preventDefault()}}>
             <input type="text" name="email" placeholder="Email"></input>
             <textarea name="message" placeholder="Message"></textarea>
             <button className="button-27">Send</button>
